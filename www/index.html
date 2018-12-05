@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+		<meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		
+		
+    </head>
+    <body>
+		<style>
+			.categoryheader{
+				color:#fff;
+				margin-top:20px;
+		}
+		</style>
+
+		
+		
+		<!-- Start of Homepage -->
+<div data-role="page" id="menu">
+	<div data-role="header" class="headermain">
+	<form>
+		<div class="ui-field-contain">
+    		<select name="select-native-1" id="select-native-1">
+        		<option value="1" selected="selected">New York</option>
+        		<option value="2">Jersey City</option>
+        		<option value="3">Boston</option>
+        		<option value="4">City 4</option>
+    		</select>
+		</div>
+	</form>
+	</div><!-- /header -->
+
+	
+<!--Featured img-->
+	<div role="main" class="ui-content">
+		<div class="flex-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="img/dessert.jpg" alt="slide">
+                    <p class="flex-caption">Top baker of October</p>
+                </li>
+                <li>
+                    <img src="img/dessertchef.jpg" alt="slide">
+                    <p class="flex-caption">Fantastic &raquo;</p>
+                </li>
+                <li>
+                    <img src="img/featuredimg.jpg" alt="slide"> 
+                    <p class="flex-caption"> &laquo; Wow &raquo;</p>                        
+                </li>
+            </ul>
+        </div>
+    	</div>
+		
+		<!--<div class="ui-grid-solo">
+			<img src="img/dessert.jpg" alt="" style="max-width: 100%;">
+			<p>Top Desserts Chef of October</p>
+		</div>-->
+
+<!--Grid Category-->
+		<div class="ui-grid-a" style="margin-top:40px;">
+    		<div class="ui-block-a" style="text-align:center;">
+				<a href="#page2" data-transition="slide">
+					<img src="img/cooking.png" alt="" style="height:70px;">
+				</a>
+				<h3>Personal Chef</h3>
+			</div>
+			<div class="ui-block-b" style="text-align:center;">
+				<a href="#page3" data-transition="slide">
+					<img src="img/hairstyle.png" alt="" style="height:70px;">
+				</a>
+				<h3>Hair-Styling</h3>
+			</div>
+		</div><!-- /grid-a -->
+		
+		<div class="ui-grid-a" style="">
+    		<div class="ui-block-a" style="text-align:center;">
+				<a href="#page2" data-transition="slide">
+					<img src="img/spa.png" alt="" style="height:70px;">
+				</a>
+				<h3>Massages</h3>
+			</div>
+			<div class="ui-block-b" style="text-align:center;">
+				<a href="#page3" data-transition="slide">
+					<img src="img/nail.png" alt="" style="height:70px;">
+				</a>
+				<h3>Nail Professional</h3>
+			</div>
+		</div><!-- /grid-a -->		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" style="">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="home">Home</a></li>
+				<li><a href="#booking" data-icon="grid" data-transition="slide">Booking</a></li>
+				<li><a href="#profile" data-icon="gear">Me</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+		
+		
+<!--Location-->
+<div data-role="page" id="location">
+	<div data-role="header">
+	<a href="#menu" data-transition="fade" class="ui-btn">Back</a>
+
+	</div><!-- /header -->
+
+	
+
+	<div role="main" class="ui-content">
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+		
+		
+		
+<!-- Start of second page/Personal Chef-->
+<div data-role="page" id="page2">
+	
+	<div data-role="header" class="headermain" style="background-color:#000000;">
+		<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:#000000;color:#fff;border:none;font-size:12px;">&#8249;</a>
+		<h1 class="categoryheader">Personal Chef</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		
+		<div class="ui-grid-solo" style="">
+			<input type="text" id="date" value="Choose your date">	
+		</div>
+		<div class="ui-grid-solo">
+			<select name="select-native-4" id="select-native-4">
+				<option>Sort by</option>
+				<option>Rating</option>
+				<option>Price</option>
+			</select>
+		</div>
+		
+		
+		<div class="ui-grid-a" style="margin-top:30px;">
+			<hr>
+			<div class="ui-block-a" style="width:30%;">
+				<img src="img/boy.png" alt="" class="providerpic">	
+			</div>
+			<div class="ui-block-b" style="margin-left:10%;text-align:center;">
+				<h3>Best chef in newyork</h3>
+				<h3>Price:</h3>
+				<h3>Rating:5.0</h3>
+				
+			</div>
+		</div>
+		<div class="ui-grid-a" style="margin-top:5px;">
+			<hr>
+			<div class="ui-block-a" style="width:30%;">
+				<img src="img/girl0.png" alt="" class="providerpic">	
+			</div>
+			<div class="ui-block-b" style="margin-left:10%;text-align:center;">
+				<h3>Best chef in newyork</h3>
+				<h3>Price:</h3>
+				<h3>Rating:5.0</h3>
+				
+			</div>
+		</div>
+		<div class="ui-grid-a" style="margin-top:5px;">
+			<hr>
+			<div class="ui-block-a" style="width:30%;">
+				<img src="img/girl1.png" alt="" class="providerpic">	
+			</div>
+			<div class="ui-block-b" style="margin-left:10%;text-align:center;">
+				<h3>Best chef in newyork</h3>
+				<h3>Price:</h3>
+				<h3>Rating:5.0</h3>
+				
+			</div>
+		</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" style="background-color:;">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+		
+		
+		
+		
+		
+		
+
+<!-- Start of third page -->		
+<div data-role="page" id="page3">
+
+	<div data-role="header">
+	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
+		<h1>Hair-Styling</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the third in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+		
+		
+		
+		
+<!-- Start of fourth page -->		
+<div data-role="page" id="page4">
+
+	<div data-role="header">
+	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
+		<h1>Massages</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the fourth in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+		
+		
+		
+		
+<!-- Start of fifth page -->
+ <div data-role="page" id="page5">
+
+	<div data-role="header">
+	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
+		<h1>Nail Professional</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the fifsth in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+		
+<!-- Start of Booking page -->
+<div data-role="page" id="booking">
+	
+	<div data-role="header">
+	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
+		<h1>Booking</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Booking Page.</p>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Profile page -->
+<div data-role="page" id="profile">
+	
+	<div data-role="header" class="headermain" style="background-color:#000000;">
+		<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:#000000;color:#fff;border:none;font-size:12px;">&#8249;</a>
+		<h1 class="categoryheader">Profile</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo" style="text-align: center;margin-top:40%;">
+			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;">Log in</a>
+		<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+    		<form>
+        		<div style="padding:10px 20px;">
+            		<h3>Please sign in</h3>
+            		<label for="un" class="ui-hidden-accessible">Email</label>
+            		<input type="text" name="email" id="un" value="" placeholder="email" data-theme="a">
+            		<label for="pw" class="ui-hidden-accessible">Password:</label>
+            		<input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a">
+            		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Log in</button>
+        		</div>
+    		</form>
+		</div>
+		</div>
+		<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#register" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;">Register</a>
+		</div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+		
+<!-- Start of Register page -->
+<div data-role="page" id="register">
+	
+	<div data-role="header" class="headermain" style="background-color:#000000;">
+		<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:#000000;color:#fff;border:none;font-size:12px;">&#8249;</a>
+		<h1 class="categoryheader">Register</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo" style="text-align: center;margin-top:20%;">
+	
+    		<form method="post" action="connection.php">
+        		<div style="padding:10px 20px;">
+            		<h3>Please Fill the info below</h3>
+            		<label for="un" class="ui-hidden-accessible">First Name</label>
+            		<input type="text" name="fname" id="" value="" placeholder="First Name" data-theme="a">
+					<input type="text" name="lname" id="" value="" placeholder="Last Name" data-theme="a">
+					<input type="text" name="email" id="" value="" placeholder="Email" data-theme="a">
+					<input type="text" name="phone" id="" value="" placeholder="Phone" data-theme="a">
+					<input type="text" name="address" id="" value="" placeholder="Address" data-theme="a">
+            		<!--<label for="pw" class="ui-hidden-accessible">Password:</label>-->
+					<div style="text-align: left;">
+					<select name="select-city" id="select-city" >
+						<option>City</option>
+        				<option value="New York">New York</option>
+        				<option value="Jersey City">Jersey City</option>
+        				<option value="Boston">Boston</option>
+        				<option value="Chicago">Chicago</option>
+    				</select>
+					</div>
+					<input type="password" name="pass" id="" value="" placeholder="Password" data-theme="a">
+            		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Register</button>
+        		</div>
+    		</form>
+		</div>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<script type="text/javascript" src="cordova.js"></script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script>		
+	$('#date').datepicker();
+	
+	$(window).load(function(){       
+       $('.flexslider').flexslider({
+           animation: "slide",
+           animationLoop: false,
+		   controlNav:false,
+       });
+   });
+</script>
+        
+    </body>
+</html>
