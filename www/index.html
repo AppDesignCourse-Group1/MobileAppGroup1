@@ -37,6 +37,7 @@
 		<link rel="stylesheet" type="text/css" href="css/flexslider.css">
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+		<title>BookNow</title>
 		
 		
     </head>
@@ -46,14 +47,27 @@
 				color:#fff;
 				margin-top:20px;
 		}
+			.footericon{
+				height:30px;
+			}
+			.footericon:hover{
+				color:#fff;
+			}
+			a .ui-btn .footerblock{
+				background-color:gold;
+			}
+			a .ui-btn .ui-link .footerblock:active{
+				background-color: gold;
+			}
+			
 		</style>
 
 		
 		
 		<!-- Start of Homepage -->
 <div data-role="page" id="menu">
-	<div data-role="header" class="headermain">
-	<form>
+	<div data-role="header" class="headermain" style="background-color:#000000;">
+		<form style="margin-top:-4px;">
 		<div class="ui-field-contain">
     		<select name="select-native-1" id="select-native-1">
         		<option value="1" selected="selected">New York</option>
@@ -62,7 +76,7 @@
         		<option value="4">City 4</option>
     		</select>
 		</div>
-	</form>
+		</form>
 	</div><!-- /header -->
 
 	
@@ -127,9 +141,9 @@
 	<div data-role="footer" data-position="fixed" style="">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#" data-icon="home">Home</a></li>
-				<li><a href="#booking" data-icon="grid" data-transition="slide">Booking</a></li>
-				<li><a href="#profile" data-icon="gear">Me</a></li>
+				<li><a href="#menu" class="footerblock"><img src="img/homepage.png" alt="" class="footericon"><br>Home</a></li>
+				<li><a href="#booking" class="footerblock"><img src="img/list.png" alt="" class="footericon"><br>Booking</a></li>
+				<li><a href="#profile" class="footerblock"><img src="img/avatar.png" alt="" class="footericon"><br>Me</a></li>
 			</ul>
 		</div>
 	</div>
@@ -181,7 +195,7 @@
 		<div class="ui-grid-a" style="margin-top:30px;">
 			<hr>
 			<div class="ui-block-a" style="width:30%;">
-				<img src="img/boy.png" alt="" class="providerpic">	
+				<a href="#SDetailPage" data-transition="slideup"><img src="img/boy.png" alt="" class="providerpic"></a>	
 			</div>
 			<div class="ui-block-b" style="margin-left:10%;text-align:center;">
 				<h3>Best chef in newyork</h3>
@@ -222,7 +236,30 @@
 	</div><!-- /footer -->
 </div><!-- /page -->
 		
+<!-- Supplier Detail Page-->
+<div data-role="page" id="SDetailPage">
+
+	<div data-role="header">
+	<a href="#page2" data-transition="slide" data-direction="reverse" class="ui-btn">&#8249;</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" style="margin-top:40px;">
+		<div class="ui-grid-solo" style="text-align:center;">
+			<img src="img/boy.png" alt="" style="height:200px;">
+			<hr>
+		</div>
+		<div class="ui-grid-solo">
+			<p>Description</p>
+			<p>Price:</p>
+			<p>Rating:</p>
+		</div>
 		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 		
 		
 		

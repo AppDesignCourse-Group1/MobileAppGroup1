@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+		<meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<title>Supplier Detail</title>
+	<style>
+		p{
+			
+		}
+		</style>	
+		
+    </head>
+
+<body>
+	<div data-role="page" id="SDetailPage">
+
+	<div data-role="header">
+	<a href="#page2" data-transition="slide" data-direction="reverse" class="ui-btn">&#8249;</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" style="margin-top:40px;">
+		<div class="ui-grid-solo" style="text-align:center;">
+			<img src="img/boy.png" alt="" style="height:200px;">
+			<hr>
+		</div>
+		<div class="ui-grid-solo">
+			<p>Name</p>
+			<p>Description</p>
+			<p>Price:</p>
+			<p>Rating:</p>
+		</div>
+		<div class="ui-grid-solo" style="text-align:center;">
+			<a href="#bookingsuccess" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop" style="width:50%;">Book</a>
+			<div data-role="popup" id="bookingsuccess" style="text-align: center;">
+				<div style="padding:10px 20px;">
+				<h4>Your booking is received.</h4>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop" style="height:20px;">View Detail</a>
+				</div>
+			</div>
+		</div>
+		<div class="flexslider carousel">
+  			<ul class="slides">
+    			<li>
+      				<img src="img/bakery4.jpg">
+    			</li>
+    			<li>
+      			<img src="img/bakery5.jpg">
+    			</li>
+    			<li>
+      				<img src="img/bakery6.jpg">
+    			</li>
+    			<li>
+      				<img src="img/bakery7.jpg">
+    			</li>
+				<li style="text-align: center;">
+      				<a href="#gallery" data-transition="slide"><p>Load more</p></a>
+    			</li>
+    <!-- items mirrored twice, total of 12 -->
+  			</ul>
+		</div>
+		
+		<!--Fetch Review from database-->
+		<h3>Reviews</h3>
+		<div class="ui-grid-solo">
+			<hr>
+			<p style="">Delicious desserts. Especially love the donuts he made. The chochlate cake is also great. Great experience.</p>
+			
+		</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="gallery">
+
+	<div data-role="header">
+	<a href="#SDetailPage" data-transition="slide" data-direction="reverse" class="ui-btn">&#8249;</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" style="margin-top:40px;">
+		<div class="ui-grid-a" style="text-align:center;">
+			<div class="ui-block-a">
+				<img src="img/bakery4.jpg" alt="" style="height:200px;padding:10px;">
+				<img src="img/bakery6.jpg" alt="" style="height:200px;">
+			</div>
+			<div class="ui-block-b">
+				<img src="img/bakery5.jpg" alt="" style="height:200px;">
+			</div>	
+		</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+	
+<script type="text/javascript" src="cordova.js"></script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script>		
+	$(window).load(function() {
+  		$('.flexslider').flexslider({
+    		animation: "slide",
+    		animationLoop: false,
+    		itemWidth: 210,
+    		itemMargin: 5,
+			directionNav: false,
+			controlNav:false,
+  		});
+	});
+</script>
+</body>
+</html>
