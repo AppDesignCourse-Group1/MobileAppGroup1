@@ -1,18 +1,20 @@
 <?php
 $servername = "localhost";
-$dbusername = "shiyuwu";
-$dbpassword = "0109";
-$dbname = "appdatabase";
+$dbusername = "websysF181";
+$dbpassword = "websysF181!!";
+$dbname = "websysF181";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, '0109');
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully"; 
-    } catch(PDOException $e) {    
-    echo "Connection failed: " . $e->getMessage();
-    }
+$conn = new mysqli($servername,$dbusername,$dbpassword,$dbname);
 
-//Check connection
+//if ($conn->connect_error) {
+    //die("Connection failed: " . $conn->connect_error);
+//}
+//echo "Connected successfully";
+
+echo "<a href=\"index-customer.html\" rel=\"external\">";
+echo "<p>Go to Homepage</p>";
+echo "</a>";
 
 ?>
+
+

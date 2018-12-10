@@ -38,406 +38,255 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
 		<title>BookNow</title>
-		
-		
-    </head>
-    <body>
 		<style>
-			.categoryheader{
-				color:#fff;
-				margin-top:20px;
-		}
-			.footericon{
-				height:30px;
-			}
-			.footericon:hover{
-				color:#fff;
-			}
-			a .ui-btn .footerblock{
-				background-color:gold;
-			}
-			a .ui-btn .ui-link .footerblock:active{
-				background-color: gold;
+			.ui-page .ui-btn .mybtn .ui-btn-inner .ui-corner-all .ui-shadow .ui-btn-inline{
+				width:50%;
+				color:rgba(170,182,186);
+				font-weight: normal;
+				
 			}
 			
-		</style>
-
+			.mybtn{
+				width:100px;
+			}
+		</style>		
 		
-		
-		<!-- Start of Homepage -->
-<div data-role="page" id="menu">
-	<div data-role="header" class="headermain" style="background-color:#000000;">
-		<form style="margin-top:-4px;">
-		<div class="ui-field-contain">
-    		<select name="select-native-1" id="select-native-1">
-        		<option value="1" selected="selected">New York</option>
-        		<option value="2">Jersey City</option>
-        		<option value="3">Boston</option>
-        		<option value="4">City 4</option>
-    		</select>
-		</div>
-		</form>
-	</div><!-- /header -->
+    </head>
+<body>
 
-	
-<!--Featured img-->
-	<div role="main" class="ui-content">
-		<div class="flex-container">
-        <div class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="img/dessert.jpg" alt="slide">
-                    <p class="flex-caption">Top baker of October</p>
-                </li>
-                <li>
-                    <img src="img/dessertchef.jpg" alt="slide">
-                    <p class="flex-caption">Fantastic &raquo;</p>
-                </li>
-                <li>
-                    <img src="img/featuredimg.jpg" alt="slide"> 
-                    <p class="flex-caption"> &laquo; Wow &raquo;</p>                        
-                </li>
-            </ul>
-        </div>
-    	</div>
-		
-		<!--<div class="ui-grid-solo">
-			<img src="img/dessert.jpg" alt="" style="max-width: 100%;">
-			<p>Top Desserts Chef of October</p>
-		</div>-->
-
-<!--Grid Category-->
-		<div class="ui-grid-a" style="margin-top:40px;">
-    		<div class="ui-block-a" style="text-align:center;">
-				<a href="#page2" data-transition="slide">
-					<img src="img/cooking.png" alt="" style="height:70px;">
-				</a>
-				<h3>Personal Chef</h3>
-			</div>
-			<div class="ui-block-b" style="text-align:center;">
-				<a href="#page3" data-transition="slide">
-					<img src="img/hairstyle.png" alt="" style="height:70px;">
-				</a>
-				<h3>Hair-Styling</h3>
-			</div>
-		</div><!-- /grid-a -->
-		
-		<div class="ui-grid-a" style="">
-    		<div class="ui-block-a" style="text-align:center;">
-				<a href="#page2" data-transition="slide">
-					<img src="img/spa.png" alt="" style="height:70px;">
-				</a>
-				<h3>Massages</h3>
-			</div>
-			<div class="ui-block-b" style="text-align:center;">
-				<a href="#page3" data-transition="slide">
-					<img src="img/nail.png" alt="" style="height:70px;">
-				</a>
-				<h3>Nail Professional</h3>
-			</div>
-		</div><!-- /grid-a -->		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed" style="">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#menu" class="footerblock"><img src="img/homepage.png" alt="" class="footericon"><br>Home</a></li>
-				<li><a href="#booking" class="footerblock"><img src="img/list.png" alt="" class="footericon"><br>Booking</a></li>
-				<li><a href="#profile" class="footerblock"><img src="img/avatar.png" alt="" class="footericon"><br>Me</a></li>
-			</ul>
-		</div>
+<!-- ==========Start of Landing Page===================================================== -->	
+<div data-role="page" id="landing" style="background-color:rgba(37,51,105,0.9);text-shadow:none;">
+	<div style="margin-top:40%;text-align:center;">
+		<img src="img/logo.png" alt="booknow" style="height:100px;">
+		<h2 style="color:rgba(170,182,186)">Welcome to BookNow</h2>
 	</div>
-</div><!-- /page -->
-		
-		
-<!--Location-->
-<div data-role="page" id="location">
-	<div data-role="header">
-	<a href="#menu" data-transition="fade" class="ui-btn">Back</a>
-
-	</div><!-- /header -->
+	<div class="ui-grid-solo" style="text-align: center;">
+		<a href="#supplierlanding" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">I am a Service Provider</a>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+		<a href="#customerlanding" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline mybtn" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">I am a Customer</a>
+	</div>
+</div>
 
 	
-
-	<div role="main" class="ui-content">
-		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-		
-		
-		
-<!-- Start of second page/Personal Chef-->
-<div data-role="page" id="page2">
+<!-- ==========Supplier Landing===================================================== -->	
+<div data-role="page" id="supplierlanding" style="background-color:rgba(37,51,105,0.9);text-shadow:none;">
 	
-	<div data-role="header" class="headermain" style="background-color:#000000;">
-		<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:#000000;color:#fff;border:none;font-size:12px;">&#8249;</a>
-		<h1 class="categoryheader">Personal Chef</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		
-		<div class="ui-grid-solo" style="">
-			<input type="text" id="date" value="Choose your date">	
-		</div>
-		<div class="ui-grid-solo">
-			<select name="select-native-4" id="select-native-4">
-				<option>Sort by</option>
-				<option>Rating</option>
-				<option>Price</option>
-			</select>
-		</div>
-		
-		
-		<div class="ui-grid-a" style="margin-top:30px;">
-			<hr>
-			<div class="ui-block-a" style="width:30%;">
-				<a href="#SDetailPage" data-transition="slideup"><img src="img/boy.png" alt="" class="providerpic"></a>	
-			</div>
-			<div class="ui-block-b" style="margin-left:10%;text-align:center;">
-				<h3>Best chef in newyork</h3>
-				<h3>Price:</h3>
-				<h3>Rating:5.0</h3>
-				
-			</div>
-		</div>
-		<div class="ui-grid-a" style="margin-top:5px;">
-			<hr>
-			<div class="ui-block-a" style="width:30%;">
-				<img src="img/girl0.png" alt="" class="providerpic">	
-			</div>
-			<div class="ui-block-b" style="margin-left:10%;text-align:center;">
-				<h3>Best chef in newyork</h3>
-				<h3>Price:</h3>
-				<h3>Rating:5.0</h3>
-				
-			</div>
-		</div>
-		<div class="ui-grid-a" style="margin-top:5px;">
-			<hr>
-			<div class="ui-block-a" style="width:30%;">
-				<img src="img/girl1.png" alt="" class="providerpic">	
-			</div>
-			<div class="ui-block-b" style="margin-left:10%;text-align:center;">
-				<h3>Best chef in newyork</h3>
-				<h3>Price:</h3>
-				<h3>Rating:5.0</h3>
-				
-			</div>
-		</div>
-		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed" style="background-color:;">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-		
-<!-- Supplier Detail Page-->
-<div data-role="page" id="SDetailPage">
-
-	<div data-role="header">
-	<a href="#page2" data-transition="slide" data-direction="reverse" class="ui-btn">&#8249;</a>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content" style="margin-top:40px;">
-		<div class="ui-grid-solo" style="text-align:center;">
-			<img src="img/boy.png" alt="" style="height:200px;">
-			<hr>
-		</div>
-		<div class="ui-grid-solo">
-			<p>Description</p>
-			<p>Price:</p>
-			<p>Rating:</p>
-		</div>
-		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-		
-		
-		
-		
-
-<!-- Start of third page -->		
-<div data-role="page" id="page3">
-
-	<div data-role="header">
-	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
-		<h1>Hair-Styling</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<p>I'm the third in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
-		
-		
-		
-		
-<!-- Start of fourth page -->		
-<div data-role="page" id="page4">
-
-	<div data-role="header">
-	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
-		<h1>Massages</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<p>I'm the fourth in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-		
-		
-		
-		
-<!-- Start of fifth page -->
- <div data-role="page" id="page5">
-
-	<div data-role="header">
-	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
-		<h1>Nail Professional</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<p>I'm the fifsth in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-		
-<!-- Start of Booking page -->
-<div data-role="page" id="booking">
+		<!--<a href="#landing" data-transition="slide" data-direction="reverse" style="margin-top:-10px;margin-left:10px;color:rgba(246,211,211);border:none;font-size:50px;text-decoration: none;font-weight:normal;">&#8249;</a>-->
 	
-	<div data-role="header">
-	<a href="#menu" data-transition="slide" data-direction="reverse" class="ui-btn">Back</a>
-		<h1>Booking</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<p>Booking Page.</p>
-		
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
-<!-- Start of Profile page -->
-<div data-role="page" id="profile">
-	
-	<div data-role="header" class="headermain" style="background-color:#000000;">
-		<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:#000000;color:#fff;border:none;font-size:12px;">&#8249;</a>
-		<h1 class="categoryheader">Profile</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<div class="ui-grid-solo" style="text-align: center;margin-top:40%;">
-			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;">Log in</a>
-		<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-    		<form>
-        		<div style="padding:10px 20px;">
-            		<h3>Please sign in</h3>
+	<div style="margin-top:40%;text-align:center;">
+		<img src="img/logo.png" alt="booknow" style="height:100px;">
+		<h2 style="color:rgba(170,182,186)">Welcome to BookNow</h2>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
+		<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
+    		<form style="text-align: center;">
+        		<div style="padding:10px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
+            		<h3>Please Sign In</h3>
             		<label for="un" class="ui-hidden-accessible">Email</label>
-            		<input type="text" name="email" id="un" value="" placeholder="email" data-theme="a">
+            		<input type="text" name="email" id="" value="" placeholder="Email" data-theme="a" style="color:rgba(170,182,186)">
             		<label for="pw" class="ui-hidden-accessible">Password:</label>
-            		<input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a">
-            		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Log in</button>
+            		<input type="password" name="pass" id="" value="" placeholder="Password" data-theme="a" style="color:rgba(170,182,186)">
+            		<div class="ui-grid-solo" style="text-align: center;">
+					<a href="Homepage.html#profilesupplier" rel="external" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log In</a>
+					</div>
         		</div>
     		</form>
 		</div>
-		</div>
-		<div class="ui-grid-solo" style="text-align: center;">
-			<a href="#register" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;">Register</a>
-		</div>	
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-		
-<!-- Start of Register page -->
-<div data-role="page" id="register">
+	</div>
 	
-	<div data-role="header" class="headermain" style="background-color:#000000;">
-		<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:#000000;color:#fff;border:none;font-size:12px;">&#8249;</a>
-		<h1 class="categoryheader">Register</h1>
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#supplierregister" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Register</a>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+			<a href="#landing" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+	</div>
+</div>
+
+	
+<!-- ==========Supplier Registration===================================================== -->
+<div data-role="page" id="supplierregister" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
+
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo">
+    		<form method="post" action="supplierregister.php" id="supplierForm">
+					<label for="fnames">First Name</label>
+					<input type="text" name="fnames" id="" value="" placeholder="First Name" />
+					<label for="lnames">Last Name</label>
+					<input type="text" name="lnames" id="" value="" placeholder="Last Name" />
+					<label for="email1">Email</label>
+					<input type="text" name="emails" id="" value="" placeholder="Email" />
+					<label for="phones">Phone</label>
+					<input type="text" name="phones" id="" value="" placeholder="Phone" />
+					<label for="service_categorys">Service Category</label>
+					<div style="text-align: left;margin-bottom:8px;">
+					<select type="text" name="service_categorys" id="service_category" value="">
+							<option>Service Category</option>
+        					<option value="Personal Chef">Personal Chef</option>
+        					<option value="Hair Styling">Hair Styling</option>
+        					<option value="Massages">Massages</option>
+        					<option value="Nail Professional">Nail Professional</option>
+    				</select>
+					</div>
+					<label for="service_descs">Describe Your Service</label>
+					<textarea type="text" name="service_descs" id="service_desc" placeholder="Describe your service" value="" data-theme="a"></textarea>
+					<label for="hourlyrates">Hourly Rate</label>
+					<input type="number" name="hourlyrates" id="hourlyrate" value="" placeholder="Hourly Rate" data-theme="a">
+					<label for="passwords">Password</label>
+					<input type="password" name="passwords" id="" value="" placeholder="Password" />
+					<!--<a href="#popupRegister" data-rel="popup" data-position-to="window">-->
+						<button type="submit" name="submitsupplier" id="submitsupplier" value="submit" style="margin-top:30px;">Register</button>
+					<!--</a>-->
+					<div class="ui-grid-solo" style="text-align: center;margin-top:10px;">
+						<a href="#supplierlanding" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+					</div>
+
+    		</form>
+			<span id="result1"></span>
+			<!--<div data-role="popup" id="popupRegister" data-theme="a" class="ui-corner-all" style="text-align: center;">
+				
+			</div>-->
+		</div>
+		
+
+	</div><!-- /content -->
+</div><!-- /page -->
+
+	
+<!-- ==========Customer Landing===================================================== -->	
+<div data-role="page" id="customerlanding" style="background-color:rgba(37,51,105,0.9);text-shadow:none;">
+	<div style="margin-top:40%;text-align:center;">
+		<img src="img/logo.png" alt="booknow" style="height:100px;">
+		<h2 style="color:rgba(170,182,186)">Welcome to BookNow</h2>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#popupLogin2" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
+		<div data-role="popup" id="popupLogin2" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
+    		<form style="text-align: center;">
+        		<div style="padding:10px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
+            		<h3>Please Sign In</h3>
+            		<label for="un" class="ui-hidden-accessible">Email</label>
+            		<input type="text" name="email" id="" value="" placeholder="Email" data-theme="a" style="color:rgba(170,182,186)">
+            		<label for="pw" class="ui-hidden-accessible">Password:</label>
+            		<input type="password" name="pass" id="" value="" placeholder="Password" data-theme="a" style="color:rgba(170,182,186)">
+            		<div class="ui-grid-solo" style="text-align: center;">
+					<a href="Homepage.html" rel="external" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log In</a>
+					</div>
+        		</div>
+    		</form>
+		</div>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#customerregister" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Register</a>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+			<a href="#landing" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+	</div>
+</div>
+
+	
+	
+	
+<!-- ===================Customer Registration=================================== -->	
+<div data-role="page" id="customerregister" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
+	
+	<!--<div data-role="header" style="background-color:#fff;border:none;">
+		<a href="#customerlanding" data-transition="slide" data-direction="reverse" style="background-color:#fff;color:#000000;border:none;font-size:12px;">&#8249;</a>
+		<h2>Customer Register</h2>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<div class="ui-grid-solo" style="text-align: center;margin-top:20%;">
-	
-    		<form method="post" action="connection.php">
-        		<div style="padding:10px 20px;">
-            		<h3>Please Fill the info below</h3>
-            		<label for="un" class="ui-hidden-accessible">First Name</label>
-            		<input type="text" name="fname" id="" value="" placeholder="First Name" data-theme="a">
-					<input type="text" name="lname" id="" value="" placeholder="Last Name" data-theme="a">
-					<input type="text" name="email" id="" value="" placeholder="Email" data-theme="a">
-					<input type="text" name="phone" id="" value="" placeholder="Phone" data-theme="a">
-					<input type="text" name="address" id="" value="" placeholder="Address" data-theme="a">
-            		<!--<label for="pw" class="ui-hidden-accessible">Password:</label>-->
-					<div style="text-align: left;">
-					<select name="select-city" id="select-city" >
+		<div class="ui-grid-solo">
+    		<form method="post" action="customerregister.php" id="customerform">
+					<label for="fname">First Name</label>
+					<input type="text" name="fname" id="" value="" placeholder="First Name">
+					<label for="lname">Last Name</label>
+					<input type="text" name="lname" id="" value="" placeholder="Last Name" />
+					<label for="email">Email</label>
+					<input type="text" name="email" id="" value="" placeholder="Email" />
+					<label for="phone">Phone</label>
+					<input type="text" name="phone" id="" value="" placeholder="Phone" />
+					<label for="address">Address</label>
+					<input type="text" name="address" id="" value="" placeholder="Address" />
+					<label for="city">City</label>
+					<div style="text-align: left;margin-bottom:8px;">
+					<select type="text" name="city" id="city" style="background-color:#fff;">
 						<option>City</option>
         				<option value="New York">New York</option>
-        				<option value="Jersey City">Jersey City</option>
+        				<option value="New Jersey">Jersey City</option>
         				<option value="Boston">Boston</option>
         				<option value="Chicago">Chicago</option>
     				</select>
 					</div>
-					<input type="password" name="pass" id="" value="" placeholder="Password" data-theme="a">
-            		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Register</button>
-        		</div>
+					<label for="pass">Password</label>
+					<input type="password" name="password" id="" value="" placeholder="Password" />
+					<!--<a href="#popupRegister" data-rel="popup" data-position-to="window">-->
+						<button type="submit" name="submit" id="submit" value="submit" style="margin-top:30px;">Register</button>
+					<!--</a>-->
+					<div class="ui-grid-solo" style="text-align: center;margin-top:10px;">
+						<a href="#customerlanding" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+					</div>
+
     		</form>
+			<span id="result"></span>
+			<!--<div data-role="popup" id="popupRegister" data-theme="a" class="ui-corner-all" style="text-align: center;">
+				
+			</div>-->
 		</div>
+		
 
 	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
 </div><!-- /page -->
-
+	
 <script type="text/javascript" src="cordova.js"></script>
 <!--<script type="text/javascript" src="js/index.js"></script>-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script>		
-	$('#date').datepicker();
+<script type="text/javascript">
 	
-	$(window).load(function(){       
-       $('.flexslider').flexslider({
-           animation: "slide",
-           animationLoop: false,
-		   controlNav:false,
-       });
-   });
+	$("#submit").click(function(){
+		var data = $("#customerform :input").serializeArray();
+		$.post( $("#customerform").attr("action"),data,function(info){$("#result").html(info);});
+	});
+	$("#customerform").submit(function(){
+		return false;
+	});
+$("#submitsupplier").click(function(){
+		var data = $("#supplierForm :input").serializeArray();
+		$.post( $("#supplierForm").attr("action"),data,function(info){$("#result1").html(info);});
+	});
+$("#supplierForm").submit(function(){
+		return false;
+	});
+
+$( ".mybtn" ).bind( "click", function(event, ui) {
+	$(this).css("background-color","rgba(246,211,211)");
+});
+//$(".mybtn").click(function(){
+//	$(this).css("background-color","rgba(246,211,211)");
+//});
+$("#landing").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#supplierlanding").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#customerlanding").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#customerregister").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#customerregister").bind("pageshow",function(event,ui){
+	$("#city").css("background-color","#fff");
+});
+	
 </script>
-        
-    </body>
+	
+
+	
+</body>
 </html>

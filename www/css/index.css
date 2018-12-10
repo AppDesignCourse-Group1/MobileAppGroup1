@@ -42,13 +42,14 @@ body {
     margin:0px;
     padding:0px;
     width:100%;
+	text-shadow: none;
 }
 
 h2{
-	text-transform:uppercase;
+	
 }
 h3{
-	text-transform:uppercase;
+	font-weight:900;
 }
 
 /* Portrait layout (default) */
@@ -78,7 +79,11 @@ h3{
 }
 
 .providerpic{
-	height:100px;
+	height:50px;
+}
+
+.supplierintro{
+	font-weight:bold;
 }
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {

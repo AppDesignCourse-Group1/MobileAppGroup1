@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>  
+    <link href="contatus.css" rel="stylesheet" type="text/css">
+    <script src="contactus.js"></script>
+</head>
+<body>
+        <!--------------first page for form----------->
+<div data-role="page">  
+            <!--------------first page header----------->
+            <div data-role="header">
+                <h1>Contact Us</h1>
+            </div> 
+            <!--------------first page main content----------->
+            <div data-role="main" class="ui-content">  
+                <form method="post" action="#pageone" data-ajax="false">
+                    
+                    <label for="name">Name : <span>*</span></label>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    
+                    <label for="email">Email: <span>*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Email"/>
+                                        
+                 
+                    <label for="info">Message:</label>
+                    <textarea name="addinfo" id="info" placeholder="Message"></textarea>
+
+                    <input type="submit" data-inline="true" value="Submit" data-theme="b">	  
+                </form>
+            </div>
+            <!--------------first page footer----------->
+
+            <div data-role="footer">
+                <h1>Please fill out the message</h1>
+            </div>
+        </div>
+        <!-------------------------------------------------------------
+        End of First page
+        -------------------------------------------------------------->
+        <!--------------second page----------->
+<div data-role="page" id="pageone">
+            <!--------------second page header----------->
+            <div data-role="header">
+                <h1>Contact Us</h1>
+            </div>
+            <!--------------second page main content----------->
+            <div data-role="main" class="ui-content">
+                <h2>Form Submitted Successfully!</h2>
+            </div>
+            <!--------------second page footer----------->
+            <div data-role="footer">
+                <h1>Thank you for your email!</h1>
+            </div>
+        </div> 
+
+        <!-------------------------------------------------------------
+        End of Second page
+        -------------------------------------------------------------->
+</body>
+</html>
