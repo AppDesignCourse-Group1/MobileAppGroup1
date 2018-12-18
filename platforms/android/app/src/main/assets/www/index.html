@@ -88,7 +88,7 @@
 	<div class="ui-grid-solo" style="text-align: center;">
 			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
 		<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
-    		<form style="text-align: center;" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierrlogin.php" method="post" id="sloginform">
+    		<form style="text-align: center;" action="http://websys3.stern.nyu.edu/websysF18/websysF181/supplierrlogin.php" method="post" id="sloginform">
         		<div style="padding:5px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
             		<h3>Please Sign In</h3>
             		<label for="un" class="ui-hidden-accessible">Email</label>
@@ -118,7 +118,7 @@
 
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierregister.php" id="supplierForm">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/supplierregister.php" id="supplierForm">
 					<label for="fnames">First Name</label>
 					<input type="text" name="fnames" id="" value="" placeholder="First Name" />
 					<label for="lnames">Last Name</label>
@@ -172,7 +172,7 @@
 			<a href="#popupLogin2" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
 		<div data-role="popup" id="popupLogin2" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
 			
-    		<form style="text-align: center;" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customerlogin.php" id="cloginform" method="post">
+    		<form style="text-align: center;" action="http://websys3.stern.nyu.edu/websysF18/websysF181/customerlogin.php" id="cloginform" method="post">
         		<div style="padding:10px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
             		<h3>Please Sign In</h3>
             		<label for="un" class="ui-hidden-accessible">Email</label>
@@ -208,7 +208,7 @@
 
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customerregister.php" id="customerform">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/customerregister.php" id="customerform">
 					<label for="fname">First Name</label>
 					<input type="text" name="fname" id="" value="" placeholder="First Name">
 					<label for="lname">Last Name</label>
@@ -465,7 +465,7 @@
 </div><!-- /page -->		
 		
 <div data-role="page" id="SDetailPagetest">
-	<form style="" id="supplierselectform" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/getsupplierdetail.php" method="get">
+	<form style="" id="supplierselectform" action="http://websys3.stern.nyu.edu/websysF18/websysF181/getsupplierdetail.php" method="get">
 		<input id="supplierselect" name="sid" value="">
 	</form>
 	<div id="showdetail"></div>	
@@ -597,7 +597,7 @@
 			</div>-->
 		<div class="ui-grid-solo" style="margin-top:10px;">
 			<hr>
-			<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/ordercreate.php" id="orderform">
+			<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/ordercreate.php" id="orderform">
 					<label for="dateform">Select Date</label>
 					<select id="dateform" name="dateform"></select>
 					<!--<div style="text-align: left;margin-bottom:8px;">
@@ -720,7 +720,7 @@
 <div data-role="page" id="updatecustomerprofile" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customerupdate.php" id="customerupdateform">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/customerupdate.php" id="customerupdateform">
         		<div style="">
 					<label for="fname">First Name</label>
 					<input type="text" name="fname" id="" value="" placeholder="">
@@ -977,7 +977,7 @@
 		<hr style="margin-top:20px;">
 		<div class="ui-grid-solo" style="text-align: center;background-color:#253369;height:500px;margin-top:20px;">
 			<h3 style="color:#fff;margin-top:10px;">Add Available Date</h3>
-			<form name="selectdate" id="selectdate" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierselectdate.php" method="post">
+			<form name="selectdate" id="selectdate" action="http://websys3.stern.nyu.edu/websysF18/websysF181/supplierselectdate.php" method="post">
 			<select type="text" name="choosedate" id="choosedate">
 				<option value="Dec19">Dec 19</option>
 				<option value="Dec20">Dec 20</option>
@@ -1014,7 +1014,7 @@
 <div data-role="page" id="updatesupplierprofile" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierupdate.php" id="supplierupdateform">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/supplierupdate.php" id="supplierupdateform">
         		<div style="">
 					<label for="fname">First Name</label>
 					<input type="text" name="fname" id="" value="" placeholder="">
@@ -1424,7 +1424,7 @@ $("#customerregister").bind("pageshow",function(event,ui){
 function gettheuser() {
 /* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
 /* alert("in the gettheuser");  */
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/personalchef.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/personalchef.php";
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['users'], function(index, value) {
@@ -1502,7 +1502,7 @@ function gettheuser() {
                     };
 	
 	function gettheuserSorted(sortby) {
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/personalchefSort.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/personalchefSort.php";
 		$("#showsupplier").empty();
 		
 		console.log("the sortby is " + sortby);
@@ -1581,7 +1581,7 @@ function gettheuser() {
 	function gettheuser2() {
 /* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
 /* alert("in the gettheuser");  */
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/hairstyling.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/hairstyling.php";
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['users'], function(index, value) {
@@ -1599,7 +1599,7 @@ function gettheuser() {
 	function gettheuser3() {
 /* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
 /* alert("in the gettheuser");  */
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/massages.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/massages.php";
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['users'], function(index, value) {
@@ -1617,7 +1617,7 @@ function gettheuser() {
 	function gettheuser4() {
 /* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
 /* alert("in the gettheuser");  */
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/nail.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/nail.php";
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['users'], function(index, value) {
@@ -1635,7 +1635,7 @@ function gettheuser() {
 	function showadate() {
 /* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
 /* alert("in the gettheuser");  */
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/showadate.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/showadate.php";
 		$('#showadate').empty();
   		$.getJSON(URL, function(data){                      
         console.log(data);		
@@ -1828,7 +1828,7 @@ function getsupplierprofile() {
 /* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
 /* alert("in the gettheuser");  */
 		 $("#showsupplierprofile").empty();
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierprofile.php";		
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/supplierprofile.php";		
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['users'], function(index, value) {
@@ -1894,7 +1894,7 @@ function getcustomerprofile() {
 /* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
 /* alert("in the gettheuser");  */
 		 $("#showcustomer").empty();
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customerprofile.php";		
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/customerprofile.php";		
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['users'], function(index, value) {
@@ -1909,7 +1909,7 @@ function getcustomerprofile() {
 	
 	function getsupplierdetail(){
   		//$("#showsupplierdetail").empty();
-   		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/getsupplierdetail.php";
+   		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/getsupplierdetail.php";
 		//console.log("the user is " + user);
    		//URLS = URL + "?" + "user" + "=" + user;
 		//console.log("the URL is ");
@@ -1975,7 +1975,7 @@ function getcustomerprofile() {
 	};  /* end the function */
 
 	function getdate(){
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/getdate.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/getdate.php";
   		$.getJSON(URL, function(data){                      
         	console.log(data);		
        		$.each(data['dates'], function(index, value) {
@@ -1988,7 +1988,7 @@ function getcustomerprofile() {
                        };
 	
 	function getordercustomer(){
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customershoworder.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/customershoworder.php";
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['orders'], function(index, value){
@@ -2050,7 +2050,7 @@ function getcustomerprofile() {
 });
 	
 		function getordersupplier(){
-		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/suppliershoworder.php";
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/suppliershoworder.php";
   		$.getJSON(URL, function(data){                      
         console.log(data);		
         $.each(data['orders'], function(index, value){
