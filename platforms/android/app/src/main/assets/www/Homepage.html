@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+		<meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.timepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.raty.css">
+		<title>BookNow</title>
+		
+		
+    </head>
+    <body>
+		<style>
+			.categoryheader{
+				color:#fff;
+				margin-top:20px;
+		}
+			.footericon{
+				height:30px;
+			}
+		</style>
+
+
+	<!-- Start of Homepage -->
+<div data-role="page" id="menu">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<form style="margin-top:-4px;">
+		<div class="ui-field-contain">
+    		<select name="select-native-1" id="select-native-1">
+        		<option value="New York" selected="selected">New York</option>
+        		<option value="Jersey City">Jersey City</option>
+        		<option value="Boston">Boston</option>
+        		<option value="Chicago">Chicago</option>
+    		</select>
+		</div>
+		</form>
+	</div><!-- /header -->
+	
+
+	
+<!--Featured img-->
+	<div role="main" class="ui-content">
+		<div class="flex-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="img/makingsushi.jpg" alt="slide">
+                    <p class="flex-caption"></p>
+                </li>
+                <li>
+                    <img src="img/hair.jpg" alt="slide">
+                    <p class="flex-caption"></p>
+                </li>
+                <li>
+                    <img src="img/massages.jpg" alt="slide"> 
+                    <p class="flex-caption"></p>                        
+                </li>
+				<li>
+                    <img src="img/nailp.jpg" alt="slide"> 
+                    <p class="flex-caption"></p>                        
+                </li>
+            </ul>
+        </div>
+    	</div>
+
+<!--Grid Category-->
+		<div class="ui-grid-b" style="margin-top:40px;">
+    		<div class="ui-block-a" style="text-align:center;width:40%">
+				<a href="#page2" data-transition="slide">
+					<img src="img/cooking.png" alt="" style="height:70px;">
+				</a>
+				<h3>Personal Chef</h3>
+			</div>
+			<div class="ui-block-b" style="text-align:center;width:10%"><div style="border-right:1px solid #000000;height:90px;"></div></div>
+			<div class="ui-block-c" style="text-align:center;width:40%;float:right;">
+				<a href="#page3" data-transition="slide">
+					<img src="img/hairstyle.png" alt="" style="height:70px;">
+				</a>
+				<h3>Hair Styling</h3>
+			</div>
+		</div><!-- /grid-a -->
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="width:40%"><div style="border-bottom:1px solid #000000;"></div></div>
+			<div class="ui-block-b" style="width:40%;float:right;"><div style="border-bottom:1px solid #000000;"></div></div>
+		</div>
+		<div class="ui-grid-b" style="margin-top:40px;">
+    		<div class="ui-block-a" style="text-align:center;width:40%">
+				<a href="#page4" data-transition="slide">
+					<img src="img/spa.png" alt="" style="height:70px;">
+				</a>
+				<h3>Massages</h3>
+			</div>
+			<div class="ui-block-b" style="text-align:center;width:10%"><div style="border-right:1px solid #000000;height:90px;"></div></div>
+			<div class="ui-block-c" style="text-align:center;width:40%;float:right;">
+				<a href="#page5" data-transition="slide">
+					<img src="img/nail.png" alt="" style="height:70px;">
+				</a>
+				<h3 style="margin-left:0px;">Nail Professional</h3>
+			</div>
+		</div><!-- /grid-a -->	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#menu" class="footerblock" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:rgba(170,182,186);"><img src="img/homepage1.png" alt="" class="homeicon footericon"><br>Home</a></li>
+				<li><a href="#profile" class="footerblock me" id="me1" style="color:rgba(37,51,105);"><img src="img/avatar2.png" alt="" class="meicon footericon"><br>My Account</a></li>
+				<li><a href="#contact" class="footerblock support" id="support1" style="color:rgba(37,51,105);"><img src="img/support2.png" alt="" class="supporticon footericon"><br>Support</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<!-- ===================Start of second page/Personal Chef=================================== -->
+<div data-role="page" id="page2">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;" >
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="text-align:left;margin-left:10px;width:35%;">
+				<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:24px;text-decoration: none;">&#8249;</a>
+			</div>
+			<div class="ui-block-b" style="text-align:left;">
+				<p>Personal Chef</p>
+			</div>
+		</div>
+     </div><!-- /header -->
+	
+<!--	<a href="#SDetailPagetest"><p value="5" id="testbtn">Supplier ID:5</p></a> -->
+	
+	<div role="main" class="ui-content">
+		
+		<div class="ui-grid-solo" style="">
+			<input type="text" id="date" value="">	
+		</div>
+		<div class="ui-grid-solo">
+			<form name="selectsort" id="selectsort" action="">
+			<select name="sortby" id="sortby" value="">
+				<option value="">Sort by</option>
+				<option value="default">Default</option>
+				<option value="overall_rating">Rating</option>
+				<option value="hourly_rate">Hourly Rate</option>
+			</select>
+			<a href="#page2" data-transition="fade"><button name="submitsortby" id="submitsortby" value="submit" style="width:50%;float:left;">Search</button></a>
+			</form>
+		</div>
+
+		
+		<div class="ui-grid-a" style="margin-top:10px;" id="showsupplier">
+			
+		</div>
+		
+	
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#menu" class="footerblock home" style="color:rgba(37,51,105);"><img src="img/homepage2.png" alt="" class="homeicon footericon"><br>Home</a></li>
+				<li><a href="#profile" class="footerblock me" style="color:rgba(37,51,105);"><img src="img/avatar2.png" alt="" class="meicon footericon"><br>My Account</a></li>
+				<li><a href="#contact" class="footerblock support" style="color:rgba(37,51,105);"><img src="img/support2.png" alt="" class="supporticon footericon"><br>Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+<!-- ===================Start of third page/Hair Styling=================================== -->
+<div data-role="page" id="page3">
+	
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;" >
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="text-align:left;margin-left:10px;width:35%;">
+				<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:24px;text-decoration: none;">&#8249;</a>
+			</div>
+			<div class="ui-block-b" style="text-align:left;">
+				<p>Hair Styling</p>
+			</div>
+		</div>
+     </div><!-- /header -->
+	
+	
+	<div role="main" class="ui-content">
+		
+		<div class="ui-grid-solo" style="">
+			<input type="text" id="date2" value="">	
+		</div>
+		<div class="ui-grid-solo">
+			<select name="select-native-4" id="">
+				<option>Sort by</option>
+				<option>Rating</option>
+				<option>Price</option>
+			</select>
+		</div>
+		
+		
+		<div class="ui-grid-a" style="margin-top:30px;" id="showsupplier2">
+			
+		</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#menu" class="footerblock home" style="color:rgba(37,51,105);"><img src="img/homepage2.png" alt="" class="homeicon footericon"><br>Home</a></li>
+				<li><a href="#profile" class="footerblock me" style="color:rgba(37,51,105);"><img src="img/avatar2.png" alt="" class="meicon footericon"><br>My Account</a></li>
+				<li><a href="#contact" class="footerblock support" style="color:rgba(37,51,105);"><img src="img/support2.png" alt="" class="supporticon footericon"><br>Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->		
+		
+<div data-role="page" id="SDetailPagetest">
+	<form style="" id="supplierselectform" action="getsupplierdetail.php" method="get">
+		<input id="supplierselect" name="sid" value="">
+	</form>
+	<div id="showdetail"></div>	
+</div>		
+		
+<!-- ===================Start of fourth page/Massages=================================== -->
+<div data-role="page" id="page4">
+	
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;" >
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="text-align:left;margin-left:10px;width:35%;">
+				<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:24px;text-decoration: none;">&#8249;</a>
+			</div>
+			<div class="ui-block-b" style="text-align:left;">
+				<p>Massages</p>
+			</div>
+		</div>
+     </div><!-- /header -->
+	
+	
+	<div role="main" class="ui-content">
+		
+		<div class="ui-grid-solo" style="">
+			<input type="text" id="date3" value="">	
+		</div>
+		<div class="ui-grid-solo">
+			<select name="select-native-4" id="">
+				<option>Sort by</option>
+				<option>Rating</option>
+				<option>Price</option>
+			</select>
+		</div>
+		
+		
+		<div class="ui-grid-a" style="margin-top:30px;" id="showsupplier3">
+			
+		</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#menu" class="footerblock home" style="color:rgba(37,51,105);"><img src="img/homepage2.png" alt="" class="homeicon footericon"><br>Home</a></li>
+				<li><a href="#profile" class="footerblock me" style="color:rgba(37,51,105);"><img src="img/avatar2.png" alt="" class="meicon footericon"><br>My Account</a></li>
+				<li><a href="#contact" class="footerblock support" style="color:rgba(37,51,105);"><img src="img/support2.png" alt="" class="supporticon footericon"><br>Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->					
+		
+<!-- ===================Start of fifth page/Nail Professional=================================== -->
+<div data-role="page" id="page5">
+	
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;" >
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="text-align:left;margin-left:10px;width:35%;">
+				<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:24px;text-decoration: none;">&#8249;</a>
+			</div>
+			<div class="ui-block-b" style="text-align:left;">
+				<p>Nail Professional</p>
+			</div>
+		</div>
+     </div><!-- /header -->
+	
+	
+	<div role="main" class="ui-content">
+		
+		<div class="ui-grid-solo" style="">
+			<input type="text" id="date4" value="">	
+		</div>
+		<div class="ui-grid-solo">
+			<select name="select-native-4" id="">
+				<option>Sort by</option>
+				<option>Rating</option>
+				<option>Price</option>
+			</select>
+		</div>
+		
+		
+		<div class="ui-grid-a" style="margin-top:30px;" id="showsupplier4">
+			
+		</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#menu" class="footerblock home" style="color:rgba(37,51,105);"><img src="img/homepage2.png" alt="" class="homeicon footericon"><br>Home</a></li>
+				<li><a href="#profile" class="footerblock me" style="color:rgba(37,51,105);"><img src="img/avatar2.png" alt="" class="meicon footericon"><br>My Account</a></li>
+				<li><a href="#contact" class="footerblock support" style="color:rgba(37,51,105);"><img src="img/support2.png" alt="" class="supporticon footericon"><br>Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->	
+<!-- ===================Start of Supplier Detail Page========================================== -->		
+<div data-role="page" id="SDetailPage">
+	
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#page2" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>	
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" style="">
+		<div class="ui-grid-solo" style="text-align:center;background-color:rgba(37,51,105,0.9)">
+			<img src="img/boy.png" alt="" style="height:200px;">	
+		</div>
+		<div class="ui-grid-solo" style="font-weight:bold;">
+			<hr>
+			<p>Name</p>
+			<p>Description</p>
+			<p>Hourly Rate:</p>
+			<p>Rating:</p>
+		</div>
+
+			<div class="ui-grid-solo">
+				<lable for="bookdate" class="ui-hidden-accessible">Date</lable>
+				<input type="text" id="bookdate" name="bookdate" value="" placeholder="Date">
+			</div>
+			<div class="ui-grid-solo">
+				<lable for="booktime" class="ui-hidden-accessible">Time</lable>
+				<input type="text" id="booktime" class="timepicker" name="booktime" value="" placeholder="Time">
+			</div>
+			<div class="ui-grid-solo" style="margin-left:-15px;margin-top:10px;">
+    			<select name="selectd" id="selectd">
+        			<option value="">1 Hour</option>
+        			<option value="">1 Hour 30 Minutes</option>
+        			<option value="">2 Hours</option>
+        			<option value="">2 Hours 30 Minutes</option>
+					<option value="">3 Hours</option>
+    			</select>
+			</div>
+		<div class="ui-grid-solo" style="text-align:center;margin-top:10px;">
+			<a href="#bookingsuccess" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop" style="width:50%;">Book</a>
+			<div data-role="popup" id="bookingsuccess" style="text-align:left;width:300px;height:380px;">
+				<div class="ui-grid-solo" style="text-align: center;font-size:20px;font-weight:bold;"><p>Order Summary</p></div>
+				<div style="padding:20px;font-weight:bold;font-size:16px;">
+					<hr>
+					<p>Supplier Name:</p>
+					<p>Time:</p>
+					<p>Total Price:</p>
+					<a href="#SDetailPage" data-transition="fade" style="color:rgba(170,182,186);font-weight:lighter;font-size:14px;letter-spacing: 0.15em;">Edit</a>
+					<div class="ui-grid-solo" style="text-align: center;margin-top:10px;">
+						<a href="checkout.html" rel="external" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Check Out</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div class="flexslider carousel">
+  			<ul class="slides">
+    			<li>
+      				<img src="img/bakery4.jpg">
+    			</li>
+    			<li>
+      			<img src="img/bakery5.jpg">
+    			</li>
+    			<li>
+      				<img src="img/bakery6.jpg">
+    			</li>
+    			<li>
+      				<img src="img/bakery7.jpg">
+    			</li>
+				<li style="text-align: center;">
+      				<a href="#gallery" data-transition="slide"><p>Load more</p></a>
+    			</li>
+  			</ul>
+		</div>-->
+		
+		<!--Fetch Review from database-->
+		<h3>Reviews</h3>
+		<div class="ui-grid-solo">
+			<hr>
+			<p style="">Delicious desserts. Especially love the donuts he made. The chochlate cake is also great. Great experience.</p>
+			
+		</div>
+		
+	</div><!-- /content -->
+</div><!-- /page -->		
+		
+
+
+<!-- ======================Start of Profile page=========================================== -->
+<div data-role="page" id="profile" style="text-shadow:none;">
+	
+	<div data-role="header" class="" style="background-color:rgba(37,51,105);text-shadow:none;color:#fff;">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<a href="#popprofileimg" data-rel="popup" data-position-to="window" data-transition="fade"><img src="img/user.png" alt="profileimg" style="height:80px;margin-left:20px;margin-top:20px;margin-bottom:10px;">
+				</a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#mypanel" data-transition="slidedown" style="float:right;margin-right:20px;margin-top:50px;"><img src="img/menu.png" style="height:20px;" alt=""></a>
+			</div>
+		</div>
+	</div><!-- /header -->
+	<div data-role="popup" id="popprofileimg" data-overlay-theme="b" data-theme="b" data-corners="false">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-a;; ui-show ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/user.png" style="max-height:512px;" alt="">
+	</div>
+	<div data-role="panel" id="mypanel" data-display="overlay" data-position="right">
+		<div class="ui-grid-solo"><a href="#order" data-transition="pop" style="text-decoration: none;color:#000000;"><h2 style="font-weight:normal;">Order Management</h2></a><hr></div>
+		<div class="ui-grid-solo"><a href="#settings" data-transition="pop" style="text-decoration: none;color:#000000;"><h2 style="font-weight:normal;">Settings</h2></a><hr></div>
+		<div class="ui-grid-solo"><a href="index.html" rel="external" data-transition="pop" style="text-decoration: none;color:#000000;"><h2 style="font-weight:normal;">Log Out</h2></a><hr></div>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width:25%">
+				<h3 style="font-weight:bold;">First Name</h3>
+			</div>
+			<div class="ui-block-b" style="width:25%;">
+				<h3 style="font-weight:bold;">Last Name</h3>
+			</div>
+			<div class="ui-block-c" style="float:right;">
+				<h3 style="font-weight:bold;"></h3>
+			</div>		
+		</div>
+		<div class="ui-grid-a" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:15%;"><p>Email:</p></div>
+			<div class="ui-block-b"><p>**********</p></div>
+		</div>
+		<div class="ui-grid-a" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:15%;"><p>Phone:</p></div>
+			<div class="ui-block-b"><p>*********</p></div>
+		</div>
+		<div class="ui-grid-a" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:15%;"><p>Address:</p></div>
+			<div class="ui-block-b" style="width:75%;"><p>**********</p></div>
+		</div>
+		<div class="ui-grid-solo" style="text-align: center;margin-top:20px;">
+		<a href="#updatecustomerprofile" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:10px;"><p>Update My Profile</p></a>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#menu" class="footerblock home" style="color:rgba(37,51,105);"><img src="img/homepage2.png" alt="" class="homeicon footericon"><br>Home</a></li>
+				<li><a href="#profile" class="footerblock me" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:rgba(170,182,186);"><img src="img/avatar1.png" alt="" class="meicon footericon"><br>My Account</a></li>
+				<li><a href="#contact" class="footerblock support" style="color:rgba(37,51,105);"><img src="img/support2.png" alt="" class="supporticon footericon"><br>Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- /page -->
+
+		
+		
+<!-- ======================Update Customer Profile Page===================================== -->
+<div data-role="page" id="updatecustomerprofile" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo">
+    		<form method="get" action="">
+        		<div style="">
+					<label for="fname">First Name</label>
+					<input type="text" name="fname" id="" value="" placeholder="Shiyu">
+					<label for="fname">Last Name</label>
+					<input type="text" name="lname" id="" value="" placeholder="Wu">
+					<label for="address">Address</label>
+					<input type="text" name="address" id="" value="" placeholder="465 Wahshington Blvd">
+					<label for="city">City</label>
+					<div style="text-align: left;margin-bottom:8px;">
+					<select type="text" name="city" id="city" style="background-color:#fff;">
+						<option>City</option>
+        				<option value="New York">New York</option>
+        				<option value="New Jersey">Jersey City</option>
+        				<option value="Boston">Boston</option>
+        				<option value="Chicago">Chicago</option>
+    				</select>
+					</div>
+        		</div>
+				<div class="ui-grid-solo">
+					<button id="chooseFile">Upload Profile Image</button>
+				</div>
+				<div class="hiddenfile" style="height:100px;">
+					<input type="file" data-clear-btn="false" name="image" accept="image/*" capture>
+				</div>
+				<div id="preview"></div>
+				<div class="ui-grid-solo" style="text-align: center;">
+					<a href="#profile" data-transition="slide" data-direction="reverse" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Save</a>
+				</div>
+				
+				<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+					<a href="#profile" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+				</div>
+    		</form>
+				
+		</div>
+	</div>
+</div>
+
+		
+		
+<!-- ======================Start of Order Management page=========================================== -->
+<div data-role="page" id="order" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#profile" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>
+		
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width:40%;margin-top:8px;">
+				<img src="img/user1.png" style="height:80px;" alt="">
+			</div>
+			<div class="ui-block-b"  style="width:40%;">
+				<p>Personnal Chef</p>
+				<p>Supplier Name</p>
+				<p>12/12/2018</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<a href="#orderupcomingdetail" data-transition="slide" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;">&#8250;</a>
+			</div>
+		</div>
+		<hr>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#order" class="footerblock upcoming" data-transition="pop" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:rgba(170,182,186);">Upcoming</a></li>
+				<li><a href="#orderhistory" class="footerblock completed" data-transition="pop" style="text-shadow:none;color:rgba(170,182,186);">Past</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- ======================Start of Order Management History Page=========================================== -->
+<div data-role="page" id="orderhistory" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#profile" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>
+		
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width:40%;margin-top:8px;">
+				<img src="img/user1.png" style="height:80px;" alt="">
+			</div>
+			<div class="ui-block-b"  style="width:40%;">
+				<p>Personnal Chef</p>
+				<p>Supplier Name</p>
+				<p>11/23/2018</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<a href="#orderhistorydetail" data-transition="slide" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;">&#8250;</a>
+			</div>
+		</div>
+		<hr>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#order" class="footerblock upcoming" data-transition="pop" style="text-shadow:none;color:rgba(170,182,186);">Upcoming</a></li>
+				<li><a href="#orderhistory" class="footerblock completed" data-transition="pop" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:rgba(170,182,186);">Past</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- ======================Start of Order Detail Page=========================================== -->
+<div data-role="page" id="orderupcomingdetail" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#order" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>		
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-solo" style="text-align:center;">
+			<img src="img/user1.png" alt="" style="height:100px;">
+		</div>
+		<div class="ui-grid-b" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:40%;margin-top:20px;">
+				<p>Personal Chef</p>
+			</div>
+			<div class="ui-block-b"  style="width:40%;margin-top:20px;">
+				<p>Supplier Name</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<p>12/12/2018</p>
+			</div>
+		</div>
+		<hr>
+		<div class="ui-grid-solo" style="">
+			<p>Duration: 3 Hours</p>
+		</div>
+		<div class="ui-grid-solo" style="">
+			<p>My Address:</p>
+		</div>
+		<div class="ui-grid-solo" style="">
+			<p>Total Price:</p>
+		</div>
+		<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+			<a href="#popupcancel" data-rel="popup" data-position-to="window" data-transition="pop" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Cancel Order</a>
+		</div>
+		<div data-role="popup" id="popupcancel" data-theme="a" class="ui-corner-all">
+			<div class="ui-grid-solo" style="text-align: center;">
+				<h3 style="font-size:18px;margin-top:30px;">Are you sure you want cancel this order?</h3>
+			</div>
+			<div class="ui-grid-solo" style="text-align: center;">
+				<a href="#" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:16px;">Yes</a>
+			</div>
+			<div class="ui-grid-solo" style="text-align: center;">
+				<a href="#" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:16px;">No</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ======================Start of Order History Detail Page=========================================== -->
+<div data-role="page" id="orderhistorydetail" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#orderhistory" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>	
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-solo" style="text-align:center;">
+			<img src="img/user1.png" alt="" style="height:100px;">
+		</div>
+		<div class="ui-grid-b" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:40%;margin-top:20px;">
+				<p>Personal Chef</p>
+			</div>
+			<div class="ui-block-b"  style="width:40%;margin-top:20px;">
+				<p>Supplier Name</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<p>11/23/2018</p>
+			</div>
+		</div>
+		<hr>
+		<div class="ui-grid-solo" style="">
+			<p>Duration: 3 Hours</p>
+		</div>
+		<div class="ui-grid-solo" style="">
+			<p>My Address:</p>
+		</div>
+		<div class="ui-grid-solo" style="">
+			<p>Total Price:</p>
+		</div>
+		<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+			<a href="#rateorder" data-transition="pop" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Add Rating</a>
+		</div>
+	</div>
+</div>
+
+<!-- ======================Settings Page===================================== -->
+<div data-role="page" id="settings" style="text-shadow:none;color:#fff;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#profile" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>	
+	</div><!-- /header -->
+	<div role="main" class="ui-content">
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="margin-top:10px;">
+				<a href="#" style="text-decoration:none;color:#000000;"><p>Phone No.</p></a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#popchangephone" data-rel="popup" data-position-to="window" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;"><p style="display:inline;">&#8250;</p></a>
+			</div>		
+		</div>
+		<hr>
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="margin-top:10px;">
+				<a href="#" style="text-decoration:none;color:#000000;"><p>Reset Login Password</p></a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#" data-transition="slide" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;"><p style="display:inline;">&#8250;</p></a>
+			</div>		
+		</div>
+		<hr>
+	</div>
+	<div data-role="popup" id="popchangephone" data-theme="a" class="ui-corner-all" style="text-align:center;">
+		<p style="font-weight:bold;font-size:14px;">Phone Number:917*****93</p>
+		<a href="#" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:14px;">Change</a>
+	</div>
+</div>
+
+		
+		
+		
+		
+<!-- ======================Start of Supplier Profile page=========================================== -->
+<div data-role="page" id="profilesupplier" style="text-shadow:none;">
+	
+	<div data-role="header" class="" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<a href="#popprofileimg1" data-rel="popup" data-position-to="window" data-transition="fade"><img src="img/user.png" alt="profileimg" style="height:80px;margin-left:20px;margin-top:20px;margin-bottom:10px;">
+				</a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#mypanel1" data-transition="slidedown" style="float:right;margin-right:20px;margin-top:50px;"><img src="img/menu.png" style="height:20px;" alt=""></a>
+			</div>
+		</div>
+	</div><!-- /header -->
+	<div data-role="popup" id="popprofileimg1" data-overlay-theme="b" data-theme="b" data-corners="false">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-a;; ui-show ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/user.png" style="max-height:512px;" alt="">
+	</div>
+	<div data-role="panel" id="mypanel1" data-display="overlay" data-position="right">
+		<div class="ui-grid-solo"><a href="#ordersupplier" data-transition="pop" style="text-decoration: none;color:#000000;"><h2 style="font-weight:normal;">Order Management</h2></a><hr></div>
+		<div class="ui-grid-solo"><a href="#settingsupplier" data-transition="pop" style="text-decoration: none;color:#000000;"><h2 style="font-weight:normal;">Settings</h2></a><hr></div>
+		<div class="ui-grid-solo"><a href="#contactsupplier" data-transition="pop" style="text-decoration: none;color:#000000;"><h2 style="font-weight:normal;">Contact</h2></a><hr></div>
+		<div class="ui-grid-solo"><a href="index.html" rel="external" data-transition="pop" style="text-decoration: none;color:#000000;"><h2 style="font-weight:normal;">Log Out</h2></a><hr></div>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width:25%">
+				<h3 style="font-weight:bold;">First Name</h3>
+			</div>
+			<div class="ui-block-b" style="width:25%;">
+				<h3 style="font-weight:bold;">Last Name</h3>
+			</div>
+			<div class="ui-block-c" style="float:right;">
+				
+			</div>		
+		</div>
+		<div class="ui-grid-a" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:25%;"><p>Email:</p></div>
+			<div class="ui-block-b"><p>******</p></div>
+		</div>
+		<div class="ui-grid-a" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:25%;"><p>Phone:</p></div>
+			<div class="ui-block-b"><p>**********</p></div>
+		</div>
+		<div class="ui-grid-a" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:25%;"><p>Hourly Rate:</p></div>
+			<div class="ui-block-b" style="width:75%;"><p>*</p></div>
+		</div>
+		<div class="ui-grid-a" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:25%;"><p>Service Description:</p></div>
+			<div class="ui-block-b" style="width:75%;"><p>********</p></div>
+		</div>
+		<div class="ui-grid-solo" style="text-align: center;margin-top:20px;">
+		<a href="#updatesupplierprofile" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:10px;"><p>Update My Profile</p></a>
+		</div>
+	</div>
+</div><!-- /page -->
+
+		
+		
+<!-- ======================Update Supplier Profile Page===================================== -->
+<div data-role="page" id="updatesupplierprofile" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo">
+    		<form method="get" action="">
+        		<div style="">
+					<label for="fname">First Name</label>
+					<input type="text" name="fname" id="" value="" placeholder="">
+					<label for="fname">Last Name</label>
+					<input type="text" name="lname" id="" value="" placeholder="">
+					<label for="hourly_rate">Hourly Rate</label>
+					<input type="text" name="hourly_rate" id="" value="" placeholder="">
+					<lable for="service_desc">Service Description</lable>
+					<textarea type="text" name="service_desc" id="" placeholder="" value="" data-theme="a"></textarea>
+        		</div>
+				<div class="ui-grid-solo">
+					<button id="chooseFile1">Upload Profile Image</button>
+				</div>
+				<div class="hiddenfile" style="height:100px;">
+					<input type="file" data-clear-btn="false" name="image" accept="image/*" capture>
+				</div>
+				<div id="preview1"></div>
+				<div class="ui-grid-solo" style="text-align: center;">
+					<a href="#profile" data-transition="slide" data-direction="reverse" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Save</a>
+				</div>
+				
+				<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+					<a href="#profilesupplier" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+				</div>
+    		</form>
+				
+		</div>
+	</div>
+</div>
+		
+		
+<!-- ======================Start of Supplier Order Management page=========================================== -->
+<div data-role="page" id="ordersupplier" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#profilesupplier" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>
+		
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width:40%;margin-top:8px;">
+				<img src="img/user1.png" style="height:80px;" alt="">
+			</div>
+			<div class="ui-block-b"  style="width:40%;">
+				<p>Shiyu Wu</p>
+				<p>12/12/2018</p>
+				<p>12:00 PM - 15:00 PM</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<a href="#orderupcomingdetailsupplier" data-transition="slide" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;">&#8250;</a>
+			</div>
+		</div>
+		<hr>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#ordersupplier" class="footerblock1 upcoming1" data-transition="pop" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">Upcoming</a></li>
+				<li><a href="#orderhistorysupplier" class="footerblock1 completed1" data-transition="pop" style="text-shadow:none;color:rgba(170,182,186);">Past</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		
+<!-- ======================Start of Suppliser Order Management History page=========================================== -->
+<div data-role="page" id="orderhistorysupplier" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#profilesupplier" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>
+		
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width:40%;margin-top:8px;">
+				<img src="img/user1.png" style="height:80px;" alt="">
+			</div>
+			<div class="ui-block-b"  style="width:40%;">
+				<p>User Name</p>
+				<p>Date</p>
+				<p>Exact Time</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<a href="#orderhistorydetailsupplier" data-transition="slide" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;">&#8250;</a>
+			</div>
+		</div>
+		<hr>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#ordersupplier" class="footerblock1 upcoming1" data-transition="pop" style="text-shadow:none;color:rgba(170,182,186);">Upcoming</a></li>
+				<li><a href="#orderhistorysupplier" class="footerblock1 completed1" data-transition="pop" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">Past</a></li>
+			</ul>
+		</div>
+	</div>
+</div>	
+		
+		
+<!-- ======================Start of Supplier Upcoming Order Detail Page=========================================== -->
+<div data-role="page" id="orderupcomingdetailsupplier" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#ordersupplier" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>		
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-solo" style="text-align:center;">
+			<img src="img/user1.png" alt="" style="height:100px;">
+		</div>
+		<div class="ui-grid-b" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:40%;margin-top:20px;">
+				<p>User Name</p>
+			</div>
+			<div class="ui-block-b"  style="width:40%;margin-top:20px;">
+				<p>Date</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<p>Exact Time</p>
+			</div>
+		</div>
+		<hr>
+		<div class="ui-grid-solo" style="">
+			<p>Address:</p>
+		</div>
+		<div class="ui-grid-solo" style="">
+			<p>Customer's Phone:</p>
+		</div>
+		<div class="ui-grid-solo" style="">
+			<p>Total Price:</p>
+		</div>
+		<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+			<a href="#popupcancel1" data-rel="popup" data-position-to="window" data-transition="pop" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Cancel Order</a>
+		</div>
+		<div data-role="popup" id="popupcancel1" data-theme="a" class="ui-corner-all">
+			<div class="ui-grid-solo" style="text-align: center;">
+				<h3 style="font-size:18px;margin-top:30px;">Are you sure you want cancel this order?</h3>
+			</div>
+			<div class="ui-grid-solo" style="text-align: center;">
+				<a href="#" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:16px;">Yes</a>
+			</div>
+			<div class="ui-grid-solo" style="text-align: center;">
+				<a href="#" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:16px;">No</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+		
+<!-- ======================Start of Order History Detail Page=========================================== -->
+<div data-role="page" id="orderhistorydetailsupplier" style="text-shadow:none;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#orderhistorysupplier" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>	
+	</div><!-- /header -->
+	<div role="content" class="ui-content">
+		<div class="ui-grid-solo" style="text-align:center;">
+			<img src="img/user1.png" alt="" style="height:100px;">
+		</div>
+		<div class="ui-grid-b" style="font-weight:bold;">
+			<div class="ui-block-a" style="width:40%;margin-top:20px;">
+				<p>User Name</p>
+			</div>
+			<div class="ui-block-b"  style="width:40%;margin-top:20px;">
+				<p>Date</p>
+			</div>
+			<div class="ui-block-c"  style="width:20%;margin-top:20px;">
+				<p>Exact Time</p>
+			</div>
+		</div>
+		<hr>
+		<div class="ui-grid-solo" style="">
+			<p>Total Price:</p>
+		</div>
+		<div class="ui-grid-solo" style="">
+			<p>Rating from Customer:</p>
+		</div>
+	</div>
+</div>
+
+		
+<!-- ======================Settings Page Supplier===================================== -->
+<div data-role="page" id="settingsupplier" style="text-shadow:none;color:#fff;">
+	<div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);">
+		<a href="#profilesupplier" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:12px;">&#8249;</a>	
+	</div><!-- /header -->
+	<div role="main" class="ui-content">
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="margin-top:10px;">
+				<a href="#" style="text-decoration:none;color:#000000;"><p>Phone No.</p></a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#popchangephone2" data-rel="popup" data-position-to="window" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;"><p style="display:inline;">&#8250;</p></a>
+			</div>		
+		</div>
+		<hr>
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="margin-top:10px;">
+				<a href="#" style="text-decoration:none;color:#000000;"><p>Reset Login Password</p></a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#" data-transition="slide" style="color:#000000;text-decoration: none;font-size:40px;font-weight:lighter;float:right;"><p style="display:inline;">&#8250;</p></a>
+			</div>		
+		</div>
+		<hr>
+	</div>
+	<div data-role="popup" id="popchangephone2" data-theme="a" class="ui-corner-all" style="text-align:center;">
+		<p style="font-weight:bold;font-size:14px;">Phone Number:917*****93</p>
+		<a href="#" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;font-size:14px;">Change</a>
+	</div>
+</div>
+
+<!-- ======================Start of Contact Page=========================================== -->		
+<div data-role="page" id="contact" style="text-shadow: none;">  
+
+            <div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;" >
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="text-align:left;margin-left:10px;width:40%;">
+						<a href="#menu" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:24px;text-decoration: none;">&#8249;</a>
+					</div>
+					<div class="ui-block-b" style="text-align:left;">
+						<p>Contact Us</p>
+					</div>
+				</div>
+            </div> 
+
+            <div data-role="main" class="ui-content">  
+                <form method="post" action="#contact2" data-ajax="false">
+                    
+                    <label for="name">Name : <span>*</span></label>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    
+                    <label for="email">Email: <span>*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Email"/>
+                                        
+                 
+                    <label for="info">Message:</label>
+                    <textarea name="addinfo" id="info" placeholder="Message"></textarea>
+
+                    <input type="submit" data-inline="true" value="Submit" data-theme="b">	  
+                </form>
+            </div>
+
+
+</div>
+<!-- ======================Start of Contact Page for Supplier=========================================== -->			
+<div data-role="page" id="contactsupplier" style="text-shadow: none;">  
+
+            <div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;" >
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="text-align:left;margin-left:10px;width:40%;">
+						<a href="#profilesupplier" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:24px;text-decoration: none;">&#8249;</a>
+					</div>
+					<div class="ui-block-b" style="text-align:left;">
+						<p>Contact Us</p>
+					</div>
+				</div>
+            </div> 
+
+            <div data-role="main" class="ui-content">  
+                <form method="post" action="#contact2" data-ajax="false">
+                    
+                    <label for="name">Name : <span>*</span></label>
+                    <input type="text" name="name" id="" placeholder="Name">
+                    
+                    <label for="email">Email: <span>*</span></label>
+                    <input type="email" id="" name="email" placeholder="Email"/>
+                                        
+                 
+                    <label for="info">Message:</label>
+                    <textarea name="addinfo" id="" placeholder="Message"></textarea>
+
+                    <input type="submit" data-inline="true" value="Submit" data-theme="b">	  
+                </form>
+            </div>
+
+
+</div>
+
+
+<div data-role="page" id="contact2">
+
+            <div data-role="header" class="headermain" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;" >
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="text-align:left;margin-left:10px;width:40%;">
+						<a href="#contact" data-transition="slide" data-direction="reverse" style="background-color:transparent;color:#fff;border:none;font-size:24px;text-decoration: none;">&#8249;</a>
+					</div>
+					<div class="ui-block-b" style="text-align:left;">
+						<p>Contact Us</p>
+					</div>
+				</div>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h2>Form Submitted Successfully!</h2>
+            </div>
+
+</div> 
+
+		
+		
+
+<script type="text/javascript" src="cordova.js"></script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.timepicker.min.js"></script>
+<script type="text/javascript" src="js/jquery.raty.js"></script>
+<script type="text/javascript">
+/* =============================================================================== */
+
+	function gettheuser() {
+/* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
+/* alert("in the gettheuser");  */
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/personalchef.php";
+  		$.getJSON(URL, function(data){                      
+        console.log(data);		
+        $.each(data['users'], function(index, value) {
+/*            alert(value['user']['user_login']);   */
+              console.log(value);
+              /* set first option to be selected  */
+			  $('#showsupplier').append("<hr style=\"margin-top:10px;\"><div class=\"ui-block-a\" style=\"width:30%;margin-top:10px;height:250px;\"><a href=\"#SDetailPage\" data-transition=\"slide\"><img src=\"img/boy.png\" class=\"img1\" id=" + value['user']['supplier_id'] + " style=\"height:120px;\"></a></div><div class=\"ui-block-b\" style=\"margin-left:20%;text-align:left;margin-top:10px;height:250px;\"><h3 class=\"supplierintro\">" + value['user']['first_name'] + " " + value['user']['last_name'] + "</h3> <p>" + value['user']['service_desc'] + "</p> <p style=\"font-weight:bold;\">Hourly Rate:" + value['user']['hourly_rate'] + "</p><p style=\"font-weight:bold;\">Rating: " + value['user']['overall_rating'] + "</p><div class=\"demo\" data-rating= " + value['user']['overall_rating'] + "></div></div>");
+               //$('#userform').append("<option value=" + value['user']['first_name']  + ">" + value['user']['first_name'] + "</option>"); 
+			$('.demo').raty({
+
+  // enable half star selection
+  half        : true,
+  // enable half star
+  halfShow    : true, 
+  // default hints of stars
+  hints       : ['bad', 'poor', 'regular', 'good', 'gorgeous'],     
+  // number of stars             
+  number      : 5,       
+  // max number of stars                                 
+  numberMax   : 20,                
+  // a global locate where the icon will be looked.                           
+  path        : undefined,
+  // enables the selection of a precision score.
+  precision   : false,          
+  // enables readonly mode                                
+  readOnly    : true, 
+  // included values attributes to do the score round math.
+  round       : { down: .25, full: .6, up: .76 }, 
+  // initial rating
+  score       : function() {
+    return $(this).attr('data-rating');
+  }, 
+  // name of the hidden field that holds the score value.
+  scoreName   : 'score',
+  // enables just a single star selection.
+  single      : false,                 
+  // space between icons                         
+  space       : true,  
+  // custom icons
+  starHalf    : 'img/star-half.png', 
+  starOff     : 'img/star-off.png',
+  starOn      : 'img/star-on.png',
+  // target container
+  target      : undefined,    
+  // template to interpolate the score in.
+  targetFormat: '{score}',   
+  // if the last rating value will be keeped after mouseout.  
+  targetKeep  : false,
+  // element selector where the score will be filled, instead of creating a new hidden field (scoreName option).
+  targetScore : undefined,       
+  // default text setted on target.                               
+  targetText  : '',             
+  // choose if target will receive hint or 'score' type.                                
+  targetType  : 'hint',
+  // element used to represent a star.
+  starType    : 'img',   
+});
+
+                               		              }
+                                    );			
+                                  }
+		 );
+                       };
+	
+	function getsortby() {
+/* get the sort by from the form  */
+		sortby =  $("#sortby" ).val(); 
+/*  alert("in getgetsorttype");   */
+		return sortby;
+                    };
+	
+	function gettheuserSorted(sortby) {
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/personalchefSort.php";
+		$("#showsupplier").empty();
+		
+		console.log("the sortby is " + sortby);
+   		URLS = URL + "?" + "sortby" + "=" + sortby;
+		console.log("the URL is ");
+  		console.log(URLS);
+		
+  		$.getJSON(URLS, function(data){
+            console.log(data);		
+            $.each(data['users'], function(index, value) 
+                   {  
+              		console.log(value);
+			  		$('#showsupplier').append("<hr style=\"margin-top:10px;\"><div class=\"ui-block-a\" style=\"width:30%;margin-top:10px;height:250px;\"><a href=\"#SDetailPage\" data-transition=\"slide\"><img src=\"img/boy.png\" class=\"img1\" id=" + value['user']['supplier_id'] + " style=\"height:120px;\"></a></div><div class=\"ui-block-b\" style=\"margin-left:20%;text-align:left;margin-top:10px;height:250px;\"><h3 class=\"supplierintro\">" + value['user']['first_name'] + " " + value['user']['last_name'] + "</h3> <p>" + value['user']['service_desc'] + "</p> <p style=\"font-weight:bold;\">Hourly Rate:" + value['user']['hourly_rate'] + "</p><p style=\"font-weight:bold;\">Rating: " + value['user']['overall_rating'] + "</p><div class=\"demo\" data-rating= " + value['user']['overall_rating'] + "></div></div>");
+               //$('#userform').append("<option value=" + value['user']['first_name']  + ">" + value['user']['first_name'] + "</option>"); 
+					$('.demo').raty({
+
+  					// enable half star selection
+  					half        : true,
+  					// enable half star
+  					halfShow    : true, 
+  					// default hints of stars
+  					hints       : ['bad', 'poor', 'regular', 'good', 'gorgeous'],     
+  					// number of stars             
+  					number      : 5,       
+  					// max number of stars                                 
+  					numberMax   : 20,                
+  					// a global locate where the icon will be looked.                           
+  					path        : undefined,
+  					// enables the selection of a precision score.
+  					precision   : false,          
+  					// enables readonly mode                                
+  					readOnly    : true, 
+  					// included values attributes to do the score round math.
+  					round       : { down: .25, full: .6, up: .76 }, 
+  					// initial rating
+  					score       : function() {
+										return $(this).attr('data-rating');
+									}, 
+					// name of the hidden field that holds the score value.
+  					scoreName   : 'score',
+  					// enables just a single star selection.
+  					single      : false,                 
+  					// space between icons                         
+  					space       : true,  
+  					// custom icons
+  					starHalf    : 'img/star-half.png', 
+  					starOff     : 'img/star-off.png',
+  					starOn      : 'img/star-on.png',
+  					// target container
+  					target      : undefined,    
+  					// template to interpolate the score in.
+  					targetFormat: '{score}',   
+  					// if the last rating value will be keeped after mouseout.  
+  					targetKeep  : false,
+  					// element selector where the score will be filled, instead of creating a new hidden field (scoreName option).
+  					targetScore : undefined,       
+  					// default text setted on target.                               
+  					targetText  : '',             
+  					// choose if target will receive hint or 'score' type.                                
+  					targetType  : 'hint',
+  					// element used to represent a star.
+  					starType    : 'img',   
+									});
+                    }
+                        );
+                                        }
+				 );
+                       };
+/* =============================================================================== */
+	
+	
+	
+	
+/*function getsupplier() {
+
+user =  $("#supplierselect").val(); 
+
+return user;
+                    };
+	
+	
+function getsupplierdetails() {
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/getsupplierdetail.php";
+  		$.getJSON(URL, function(data){                      
+        console.log(data);		
+        $.each(data['users'], function(index, value) {
+              console.log(value);
+			  $('#showdetail').append("<p>" + value['user']['first_name'] + "</p>");
+
+                               		              }
+                                    );			
+                                  }
+		 );
+                       };
+	
+$(".img1").click(function() {
+
+        $("#supplierselect").val() = $(this).attr('id');
+		getsupplierdetails();
+                                      }
+                          );*/
+			  
+
+   /*console.log("the user is " + user);
+   URLS = URL + "?" + "user" + "=" + user;
+
+  console.log("the URL is ");
+  console.log(URLS);
+
+     $.getJSON(URLS, function(data){
+     console.log("returned data object is " + data);
+
+     
+                console.log(data);		
+                $.each(data['users'], function(index, value) 
+                   {
+                   $('#showdetail').append("<p>" + value['user']['first_name'] + "</p>" );
+                   $('#showdetail').append("<br>");
+                    }
+                        );
+			
+                   }
+ 
+				 );
+                              
+                   }; 
+	
+	
+/* =============================================================================== */
+	
+
+	
+	function gettheuser2() {
+/* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
+/* alert("in the gettheuser");  */
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/hairstyling.php";
+  		$.getJSON(URL, function(data){                      
+        console.log(data);		
+        $.each(data['users'], function(index, value) {
+/*            alert(value['user']['user_login']);   */
+              console.log(value);
+              /* set first option to be selected  */
+			  $('#showsupplier2').append("<hr style=\"margin-top:10px;\"><div class=\"ui-block-a\" style=\"width:30%;margin-top:10px;height:180px;\"><a href=\"#SDetailPage\" data-transition=\"slide\"><img src=\"img/girl0.png\" id=\"img2\" value="+ value['user']['supplier_id'] + " style=\"height:90px;\"></a></div><div class=\"ui-block-b\" style=\"margin-left:20%;text-align:left;margin-top:10px;height:180px;\"><h3 class=\"supplierintro\">" + value['user']['first_name'] + " " + value['user']['last_name'] + "</h3> <p>" + value['user']['service_desc'] + "</p> <p>Hourly Rate:" + value['user']['hourly_rate'] + "</p><p>Rating:" + value['user']['overall_rating'] + "</p></div>" );
+               //$('#userform').append("<option value=" + value['user']['first_name']  + ">" + value['user']['first_name'] + "</option>"); 
+                               		              }
+                                    );			
+                                  }
+		 );
+                       };
+	
+	function gettheuser3() {
+/* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
+/* alert("in the gettheuser");  */
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/massages.php";
+  		$.getJSON(URL, function(data){                      
+        console.log(data);		
+        $.each(data['users'], function(index, value) {
+/*            alert(value['user']['user_login']);   */
+              console.log(value);
+              /* set first option to be selected  */
+			  $('#showsupplier3').append("<hr style=\"margin-top:10px;\"><div class=\"ui-block-a\" style=\"width:30%;margin-top:10px;height:180px;\"><a href=\"#SDetailPage\" data-transition=\"slide\"><img src=\"img/girl1.png\" id=\"img3\" value="+ value['user']['supplier_id'] + " style=\"height:90px;\"></a></div><div class=\"ui-block-b\" style=\"margin-left:20%;text-align:left;margin-top:10px;height:180px;\"><h3 class=\"supplierintro\">" + value['user']['first_name'] + " " + value['user']['last_name'] + "</h3> <p>" + value['user']['service_desc'] + "</p> <p>Hourly Rate:" + value['user']['hourly_rate'] + "</p><p>Rating:" + value['user']['overall_rating'] + "<\p></div>" );
+               //$('#userform').append("<option value=" + value['user']['first_name']  + ">" + value['user']['first_name'] + "</option>"); 
+                               		              }
+                                    );			
+                                  }
+		 );
+                       };
+	
+	function gettheuser4() {
+/* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
+/* alert("in the gettheuser");  */
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/nail.php";
+  		$.getJSON(URL, function(data){                      
+        console.log(data);		
+        $.each(data['users'], function(index, value) {
+/*            alert(value['user']['user_login']);   */
+              console.log(value);
+              /* set first option to be selected  */
+			  $('#showsupplier4').append("<hr style=\"margin-top:10px;\"><div class=\"ui-block-a\" style=\"width:30%;margin-top:10px;height:220px;\"><a href=\"#SDetailPage\" data-transition=\"slide\"><img src=\"img/girl2.png\" id=" + value['user']['supplier_id'] + " value="+ value['user']['supplier_id'] + " style=\"height:90px;\"></a></div><div class=\"ui-block-b\" style=\"margin-left:20%;text-align:left;margin-top:10px;height:220px;\"><h3 class=\"supplierintro\">" + value['user']['first_name'] + " " + value['user']['last_name'] + "</h3> <p>" + value['user']['service_desc'] + "</p> <p>Hourly Rate:" + value['user']['hourly_rate'] + "</p> <p>Rating: " + value['user']['overall_rating'] + "</p></div>" );
+               //$('#userform').append("<option value=" + value['user']['first_name']  + ">" + value['user']['first_name'] + "</option>");
+                               		              }
+                                    );			
+                                  }
+		 );
+                       };
+	
+
+	
+	
+/* =============================================================================== */	
+	$(document).ready(function() {
+   $("#viewport").attr("content","width=320");
+    /*  alert("in document.ready");  */
+    /* Call webservice to return list of users who have posted  */
+    /* and then creates select option for each user in the select dropdown list */
+    gettheuser();
+	gettheuser2();
+	gettheuser3();
+	gettheuser4();
+	$("#submitsortby").click(function(){
+		gettheuserSorted(getsortby());
+	});
+		
+	
+/* In Jquery mobile, the default element is not set, so we need to pick one */
+    /* Pick the first to be selected, and then let the user change it  */  
+		
+
+                        }
+            );
+	
+	
+	
+	
+/* =============================================================================== */
+	$('#date').datepicker();
+	$('#date2').datepicker();
+	$('#date3').datepicker();
+	$('#date4').datepicker();
+	
+	
+	$("#menu").bind("pageshow",function(event,ui){
+		$('.flexslider').flexslider({
+           animation: "slide",
+           animationLoop: false,
+		   controlNav:false,
+		   directionNav: false,
+			});
+	});
+	
+	
+	$(document).ready(function(){       
+       $('.flexslider').flexslider({
+           animation: "slide",
+           animationLoop: false,
+		   controlNav:false,
+		   directionNav: false,
+       });
+   });
+	
+	
+	$( ".footerblock" ).bind( "click", function(event, ui) {
+		$(this).css("background-color","rgba(37,51,105,0.9)");
+	});
+	$("#menu").bind("pageshow",function(event,ui){
+		$(".me").css("background-color","#fff");
+		$(".support").css("background-color","#fff");
+	});
+	$("#profile").bind("pageshow",function(event,ui){
+		$(".home").css("background-color","#fff");
+		$(".support").css("background-color","#fff");
+	});
+	$("#contact").bind("pageshow",function(event,ui){
+		$(".me").css("background-color","#fff");
+		$(".home").css("background-color","#fff");
+	});
+	$("#order").bind("pageshow",function(event,ui){
+		$(".completed").css("background-color","#fff");
+		$(".upcoming").css("background-color","rgba(37,51,105,0.9)");
+	});
+	$("#orderhistory").bind("pageshow",function(event,ui){
+		$(".upcoming").css("background-color","#fff");
+		$(".completed").css("background-color","rgba(37,51,105,0.9)");
+	});
+
+	
+	$( ".footerblock1" ).bind( "click", function(event, ui) {
+		$(this).css("background-color","rgba(37,51,105,0.9)");
+	});
+	$("#ordersupplier").bind("pageshow",function(event,ui){
+		$(".completed1").css("background-color","#fff");
+		$(".upcoming1").css("background-color","rgba(37,51,105,0.9)")
+	});
+	$("#orderhistorysupplier").bind("pageshow",function(event,ui){
+		$(".upcoming1").css("background-color","#fff");
+		$(".completed1").css("background-color","rgba(37,51,105,0.9)")
+	});
+	
+	$('#updatecustomerprofile').on('pageinit',function(){
+		$('#chooseFile').click(function(e){
+			e.preventDefault();
+			$("input[type=file]").trigger("click");
+		});
+		$("input[type=file]").change(function(){
+			var file = $("input[type=file]")[0].files[0];
+			$("#preview").empty();
+			displayAsImage3(file,"preview");			
+		});	
+	});
+	
+	function displayAsImage3(file,containerid){
+		if(typeof FileReader !== "undefined"){
+			var container = document.getElementById(containerid),
+				img = document.createElement("img"),
+				reader;
+			container.appendChild(img);
+			reader = new FileReader();
+			reader.onload = (function(theImg){
+				return function(evt){
+					theImg.src = evt.target.result;
+				};
+			}(img));
+			reader.readAsDataURL(file);
+		}
+	};
+	
+	$('#updatesupplierprofile').on('pageinit',function(){
+		$('#chooseFile1').click(function(e){
+			e.preventDefault();
+			$("input[type=file]").trigger("click");
+		});
+		$("input[type=file]").change(function(){
+			var file = $("input[type=file]")[0].files[0];
+			$("#preview1").empty();
+			displayAsImage3(file,"preview1");			
+		});	
+	});
+/* ==================Supplier Detail Page============================================== */
+	
+	$('#bookdate').datepicker();
+	
+	$(document).ready(function(){
+    $('#booktime.timepicker').timepicker({});
+	});
+	
+	$('.timepicker').timepicker({
+    timeFormat: 'h:mm p',
+    interval: 30,
+    minTime: '10',
+    maxTime: '8:00pm',
+    //defaultTime: '11',
+    startTime: '10:00',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+	});
+	
+
+	
+	
+	/*$( ".home" ).bind( "click", function(event, ui) {
+		$(this).css("background-color","rgba(37,51,105,0.9)");
+		$(this).css("text-shadow","none");
+		$(this).css('color','rgba(170,182,186)');
+		var items = document.getElementsByClassName("homeicon");
+		for (var i=0;i<items.length;i++){
+				items[i].src="img/homepage1.png";
+			};
+		
+	});
+	$( ".me" ).bind( "click", function(event, ui) {
+		$(this).css({"background-color":"rgba(37,51,105,0.9)","text-shadow":"none",'color':'rgba(170,182,186)'});
+		var items = document.getElementsByClassName("meicon");
+		for (var i=0;i<items.length;i++){
+				items[i].src="img/avatar1.png";
+			};
+		
+	});
+	$( ".support" ).bind( "click", function(event, ui) {
+		$(this).css({"background-color":"rgba(37,51,105,0.9)","text-shadow":"none",'color':'rgba(170,182,186)'});
+		var items = document.getElementsByClassName("supporticon");
+		for (var i=0;i<items.length;i++){
+				items[i].src="img/support1.png";
+			};
+		
+	});*/
+	
+function getsupplier() {
+/* testwebservice user returns a JSON object with an array of users IDs and login names (user_login)  */
+/* alert("in the gettheuser");  */
+		URL="http://websys3.stern.nyu.edu/websysF18/websysF181/www/hairstyling.php";
+  		$.getJSON(URL, function(data){                      
+        console.log(data);		
+        $.each(data['users'], function(index, value) {
+/*            alert(value['user']['user_login']);   */
+              console.log(value);
+              /* set first option to be selected  */
+			  $('#showsupplier2').append("<hr style=\"margin-top:10px;\"><div class=\"ui-block-a\" style=\"width:30%;margin-top:10px;height:180px;\"><a href=\"#SDetailPage\" data-transition=\"slide\"><img src=\"img/girl0.png\" id=\"img2\" value="+ value['user']['supplier_id'] + " style=\"height:90px;\"></a></div><div class=\"ui-block-b\" style=\"margin-left:20%;text-align:left;margin-top:10px;height:180px;\"><h3 class=\"supplierintro\">" + value['user']['first_name'] + " " + value['user']['last_name'] + "</h3> <p>" + value['user']['service_desc'] + "</p> <p>Hourly Rate:" + value['user']['hourly_rate'] + "</p><p>Rating:" + value['user']['overall_rating'] + "</p></div>" );
+               //$('#userform').append("<option value=" + value['user']['first_name']  + ">" + value['user']['first_name'] + "</option>"); 
+                               		              }
+                                    );			
+                                  }
+		 );
+                       };	
+
+	
+	
+	
+	
+</script>
+        
+    </body>
+</html>

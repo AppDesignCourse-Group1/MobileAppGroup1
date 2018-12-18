@@ -28,22 +28,265 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+		<meta charset="utf-8">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+		<title>BookNow</title>
+		<style>
+			.ui-page .ui-btn .mybtn .ui-btn-inner .ui-corner-all .ui-shadow .ui-btn-inline{
+				width:50%;
+				color:rgba(170,182,186);
+				font-weight: normal;
+				
+			}
+			
+			.mybtn{
+				width:100px;
+			}
+		</style>		
+		
     </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+<body>
+
+<!-- ==========Start of Landing Page===================================================== -->	
+<div data-role="page" id="landing" style="background-color:rgba(37,51,105,0.9);text-shadow:none;">
+	<div style="margin-top:40%;text-align:center;">
+		<img src="img/logo.png" alt="booknow" style="height:100px;">
+		<h2 style="color:rgba(170,182,186)">Welcome to BookNow</h2>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+		<a href="#supplierlanding" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">I am a Service Provider</a>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+		<a href="#customerlanding" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline mybtn" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">I am a Customer</a>
+	</div>
+</div>
+
+	
+<!-- ==========Supplier Landing===================================================== -->	
+<div data-role="page" id="supplierlanding" style="background-color:rgba(37,51,105,0.9);text-shadow:none;">
+	
+		<!--<a href="#landing" data-transition="slide" data-direction="reverse" style="margin-top:-10px;margin-left:10px;color:rgba(246,211,211);border:none;font-size:50px;text-decoration: none;font-weight:normal;">&#8249;</a>-->
+	
+	<div style="margin-top:40%;text-align:center;">
+		<img src="img/logo.png" alt="booknow" style="height:100px;">
+		<h2 style="color:rgba(170,182,186)">Welcome to BookNow</h2>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
+		<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
+    		<form style="text-align: center;">
+        		<div style="padding:10px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
+            		<h3>Please Sign In</h3>
+            		<label for="un" class="ui-hidden-accessible">Email</label>
+            		<input type="text" name="email" id="" value="" placeholder="Email" data-theme="a" style="color:rgba(170,182,186)">
+            		<label for="pw" class="ui-hidden-accessible">Password:</label>
+            		<input type="password" name="pass" id="" value="" placeholder="Password" data-theme="a" style="color:rgba(170,182,186)">
+            		<div class="ui-grid-solo" style="text-align: center;">
+					<a href="Homepage.html#profilesupplier" rel="external" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log In</a>
+					</div>
+        		</div>
+    		</form>
+		</div>
+	</div>
+	
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#supplierregister" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Register</a>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+			<a href="#landing" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+	</div>
+</div>
+
+	
+<!-- ==========Supplier Registration===================================================== -->
+<div data-role="page" id="supplierregister" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
+
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo">
+    		<form method="post" action="supplierregister.php" id="supplierForm">
+					<label for="fnames">First Name</label>
+					<input type="text" name="fnames" id="" value="" placeholder="First Name" />
+					<label for="lnames">Last Name</label>
+					<input type="text" name="lnames" id="" value="" placeholder="Last Name" />
+					<label for="email1">Email</label>
+					<input type="text" name="emails" id="" value="" placeholder="Email" />
+					<label for="phones">Phone</label>
+					<input type="text" name="phones" id="" value="" placeholder="Phone" />
+					<label for="service_categorys">Service Category</label>
+					<div style="text-align: left;margin-bottom:8px;">
+					<select type="text" name="service_categorys" id="service_category" value="">
+							<option>Service Category</option>
+        					<option value="Personal Chef">Personal Chef</option>
+        					<option value="Hair Styling">Hair Styling</option>
+        					<option value="Massages">Massages</option>
+        					<option value="Nail Professional">Nail Professional</option>
+    				</select>
+					</div>
+					<label for="service_descs">Describe Your Service</label>
+					<textarea type="text" name="service_descs" id="service_desc" placeholder="Describe your service" value="" data-theme="a"></textarea>
+					<label for="hourlyrates">Hourly Rate</label>
+					<input type="number" name="hourlyrates" id="hourlyrate" value="" placeholder="Hourly Rate" data-theme="a">
+					<label for="passwords">Password</label>
+					<input type="password" name="passwords" id="" value="" placeholder="Password" />
+					<!--<a href="#popupRegister" data-rel="popup" data-position-to="window">-->
+						<button type="submit" name="submitsupplier" id="submitsupplier" value="submit" style="margin-top:30px;">Register</button>
+					<!--</a>-->
+					<div class="ui-grid-solo" style="text-align: center;margin-top:10px;">
+						<a href="#supplierlanding" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+					</div>
+
+    		</form>
+			<span id="result1"></span>
+			<!--<div data-role="popup" id="popupRegister" data-theme="a" class="ui-corner-all" style="text-align: center;">
+				
+			</div>-->
+		</div>
+		
+
+	</div><!-- /content -->
+</div><!-- /page -->
+
+	
+<!-- ==========Customer Landing===================================================== -->	
+<div data-role="page" id="customerlanding" style="background-color:rgba(37,51,105,0.9);text-shadow:none;">
+	<div style="margin-top:40%;text-align:center;">
+		<img src="img/logo.png" alt="booknow" style="height:100px;">
+		<h2 style="color:rgba(170,182,186)">Welcome to BookNow</h2>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#popupLogin2" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
+		<div data-role="popup" id="popupLogin2" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
+    		<form style="text-align: center;">
+        		<div style="padding:10px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
+            		<h3>Please Sign In</h3>
+            		<label for="un" class="ui-hidden-accessible">Email</label>
+            		<input type="text" name="email" id="" value="" placeholder="Email" data-theme="a" style="color:rgba(170,182,186)">
+            		<label for="pw" class="ui-hidden-accessible">Password:</label>
+            		<input type="password" name="pass" id="" value="" placeholder="Password" data-theme="a" style="color:rgba(170,182,186)">
+            		<div class="ui-grid-solo" style="text-align: center;">
+					<a href="Homepage.html" rel="external" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log In</a>
+					</div>
+        		</div>
+    		</form>
+		</div>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;">
+			<a href="#customerregister" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Register</a>
+	</div>
+	<div class="ui-grid-solo" style="text-align: center;margin-top:10px;" >
+			<a href="#landing" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+	</div>
+</div>
+
+	
+	
+	
+<!-- ===================Customer Registration=================================== -->	
+<div data-role="page" id="customerregister" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
+	
+	<!--<div data-role="header" style="background-color:#fff;border:none;">
+		<a href="#customerlanding" data-transition="slide" data-direction="reverse" style="background-color:#fff;color:#000000;border:none;font-size:12px;">&#8249;</a>
+		<h2>Customer Register</h2>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo">
+    		<form method="post" action="customerregister.php" id="customerform">
+					<label for="fname">First Name</label>
+					<input type="text" name="fname" id="" value="" placeholder="First Name">
+					<label for="lname">Last Name</label>
+					<input type="text" name="lname" id="" value="" placeholder="Last Name" />
+					<label for="email">Email</label>
+					<input type="text" name="email" id="" value="" placeholder="Email" />
+					<label for="phone">Phone</label>
+					<input type="text" name="phone" id="" value="" placeholder="Phone" />
+					<label for="address">Address</label>
+					<input type="text" name="address" id="" value="" placeholder="Address" />
+					<label for="city">City</label>
+					<div style="text-align: left;margin-bottom:8px;">
+					<select type="text" name="city" id="city" style="background-color:#fff;">
+						<option>City</option>
+        				<option value="New York">New York</option>
+        				<option value="New Jersey">Jersey City</option>
+        				<option value="Boston">Boston</option>
+        				<option value="Chicago">Chicago</option>
+    				</select>
+					</div>
+					<label for="pass">Password</label>
+					<input type="password" name="password" id="" value="" placeholder="Password" />
+					<!--<a href="#popupRegister" data-rel="popup" data-position-to="window">-->
+						<button type="submit" name="submit" id="submit" value="submit" style="margin-top:30px;">Register</button>
+					<!--</a>-->
+					<div class="ui-grid-solo" style="text-align: center;margin-top:10px;">
+						<a href="#customerlanding" data-transition="slide" data-direction="reverse" style="color:rgba(170,182,186);font-weight:lighter;font-size:16px;letter-spacing: 0.15em;">Back</a>
+					</div>
+
+    		</form>
+			<span id="result"></span>
+			<!--<div data-role="popup" id="popupRegister" data-theme="a" class="ui-corner-all" style="text-align: center;">
+				
+			</div>-->
+		</div>
+		
+
+	</div><!-- /content -->
+</div><!-- /page -->
+	
+<script type="text/javascript" src="cordova.js"></script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	
+	$("#submit").click(function(){
+		var data = $("#customerform :input").serializeArray();
+		$.post( $("#customerform").attr("action"),data,function(info){$("#result").html(info);});
+	});
+	$("#customerform").submit(function(){
+		return false;
+	});
+$("#submitsupplier").click(function(){
+		var data = $("#supplierForm :input").serializeArray();
+		$.post( $("#supplierForm").attr("action"),data,function(info){$("#result1").html(info);});
+	});
+$("#supplierForm").submit(function(){
+		return false;
+	});
+
+$( ".mybtn" ).bind( "click", function(event, ui) {
+	$(this).css("background-color","rgba(246,211,211)");
+});
+//$(".mybtn").click(function(){
+//	$(this).css("background-color","rgba(246,211,211)");
+//});
+$("#landing").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#supplierlanding").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#customerlanding").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#customerregister").bind("pageshow",function(event,ui){
+	$(".mybtn").css("background-color","#fff");
+});
+$("#customerregister").bind("pageshow",function(event,ui){
+	$("#city").css("background-color","#fff");
+});
+	
+</script>
+	
+
+	
+</body>
 </html>

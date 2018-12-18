@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+	
+<body>
+	
+<input type="text" id="booktime" class="timepicker" name="booktime" value="" placeholder="Select Time">
+<script type="text/javascript" src="js/jquery.timepicker.min.js"></script>	
+<script type="text/javascript">
+	$(document).ready(function(){
+    	$('#booktime.timepicker').timepicker({});
+		});
+	
+	$('.timepicker').timepicker({
+    	timeFormat: 'h:mm p',
+    	interval: 30,
+    	minTime: '10',
+    	maxTime: '8:00pm',
+    //defaultTime: '11',
+    	startTime: '10:00',
+    	dynamic: false,
+    	dropdown: true,
+    	scrollbar: true
+	});
+	</script>
+</body>
+</html>
