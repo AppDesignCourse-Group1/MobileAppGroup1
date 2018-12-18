@@ -7,7 +7,7 @@ $dbname = "websysF181";*/
 include "connection.php";
 $link = mysql_connect($servername,$dbusername,$dbpassword) or die('Cannot connect to the database.');
 mysql_select_db($dbname,$link) or die('Cannot select database.');
-$query = "SELECT supplier_id,first_name,last_name,service_desc,hourly_rate,overall_rating FROM APP_SUPPLIER WHERE service_category = \"Personal Chef\" ";
+$query = "SELECT supplier_id,first_name,last_name,service_desc,hourly_rate,overall_rating,email FROM APP_SUPPLIER WHERE service_category = \"Personal Chef\" ";
 $result = mysql_query($query,$link) or die('Errant query: '.$query);
 
 /* create one master array of the records*/

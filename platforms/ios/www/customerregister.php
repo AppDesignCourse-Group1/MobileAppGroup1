@@ -1,10 +1,6 @@
 <?php
-$servername = "localhost";
-$dbusername = "websysF181";
-$dbpassword = "websysF181!!";
-$dbname = "websysF181";
-
-
+session_start();
+include "connection.php";
 
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
@@ -16,7 +12,7 @@ $password = $_POST['password'];
 $shalpassword = sha1($password);
 
 $conn = new mysqli($servername,$dbusername,$dbpassword,$dbname);
-
+$_SESSION['email'] = $email;
 //Check connection
 if ($conn->connect_error){
 	die("Connection failed:" . $conn->connect_error);
@@ -62,7 +58,7 @@ if(!mysqli_query($conn,$sql)){
 else{
 	echo "<hr><div style=\"padding:10px 20px;color:#fff;font-weight: normal;text-align:center;\">";
 	echo "<p style=\"margin-top:40px;font-weight:bold;font-size:20px;\">Thank you for register</p>";
-	echo "<a href=\"Homepage.html\" rel=\"external\">";
+	echo "<a href=\"#menu\">";
 	echo "<p style=\"color:#fff;font-weight:bold;font-size:20px;\">Go to Homepage</p>";
 	echo "</a>";
 	echo "</div>";

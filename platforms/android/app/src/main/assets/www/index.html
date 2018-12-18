@@ -88,7 +88,7 @@
 	<div class="ui-grid-solo" style="text-align: center;">
 			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
 		<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
-    		<form style="text-align: center;" action="supplierrlogin.php" method="post" id="sloginform">
+    		<form style="text-align: center;" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierrlogin.php" method="post" id="sloginform">
         		<div style="padding:5px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
             		<h3>Please Sign In</h3>
             		<label for="un" class="ui-hidden-accessible">Email</label>
@@ -118,7 +118,7 @@
 
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="supplierregister.php" id="supplierForm">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierregister.php" id="supplierForm">
 					<label for="fnames">First Name</label>
 					<input type="text" name="fnames" id="" value="" placeholder="First Name" />
 					<label for="lnames">Last Name</label>
@@ -172,7 +172,7 @@
 			<a href="#popupLogin2" data-rel="popup" data-position-to="window" class="ui-btn mybtn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="width:50%;color:rgba(170,182,186);font-weight: normal;">Log in</a>
 		<div data-role="popup" id="popupLogin2" data-theme="a" class="ui-corner-all" style="text-align: center;width:250px;">
 			
-    		<form style="text-align: center;" action="customerlogin.php" id="cloginform" method="post">
+    		<form style="text-align: center;" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customerlogin.php" id="cloginform" method="post">
         		<div style="padding:10px 20px;color:rgba(170,182,186);font-weight: normal;text-align:center;">
             		<h3>Please Sign In</h3>
             		<label for="un" class="ui-hidden-accessible">Email</label>
@@ -208,7 +208,7 @@
 
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="customerregister.php" id="customerform">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customerregister.php" id="customerform">
 					<label for="fname">First Name</label>
 					<input type="text" name="fname" id="" value="" placeholder="First Name">
 					<label for="lname">Last Name</label>
@@ -465,7 +465,7 @@
 </div><!-- /page -->		
 		
 <div data-role="page" id="SDetailPagetest">
-	<form style="" id="supplierselectform" action="getsupplierdetail.php" method="get">
+	<form style="" id="supplierselectform" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/getsupplierdetail.php" method="get">
 		<input id="supplierselect" name="sid" value="">
 	</form>
 	<div id="showdetail"></div>	
@@ -597,7 +597,7 @@
 			</div>-->
 		<div class="ui-grid-solo" style="margin-top:10px;">
 			<hr>
-			<form method="post" action="ordercreate.php" id="orderform">
+			<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/ordercreate.php" id="orderform">
 					<label for="dateform">Select Date</label>
 					<select id="dateform" name="dateform"></select>
 					<!--<div style="text-align: left;margin-bottom:8px;">
@@ -720,7 +720,7 @@
 <div data-role="page" id="updatecustomerprofile" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="customerupdate.php" id="customerupdateform">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/customerupdate.php" id="customerupdateform">
         		<div style="">
 					<label for="fname">First Name</label>
 					<input type="text" name="fname" id="" value="" placeholder="">
@@ -977,7 +977,7 @@
 		<hr style="margin-top:20px;">
 		<div class="ui-grid-solo" style="text-align: center;background-color:#253369;height:500px;margin-top:20px;">
 			<h3 style="color:#fff;margin-top:10px;">Add Available Date</h3>
-			<form name="selectdate" id="selectdate" action="supplierselectdate.php" method="post">
+			<form name="selectdate" id="selectdate" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierselectdate.php" method="post">
 			<select type="text" name="choosedate" id="choosedate">
 				<option value="Dec19">Dec 19</option>
 				<option value="Dec20">Dec 20</option>
@@ -1014,7 +1014,7 @@
 <div data-role="page" id="updatesupplierprofile" style="background-color:rgba(37,51,105,0.9);text-shadow:none;color:#fff;">
 	<div role="main" class="ui-content">
 		<div class="ui-grid-solo">
-    		<form method="post" action="supplierupdate.php" id="supplierupdateform">
+    		<form method="post" action="http://websys3.stern.nyu.edu/websysF18/websysF181/www/supplierupdate.php" id="supplierupdateform">
         		<div style="">
 					<label for="fname">First Name</label>
 					<input type="text" name="fname" id="" value="" placeholder="">
@@ -1264,7 +1264,7 @@
             </div> 
 
             <div data-role="main" class="ui-content">  
-                <form method="post" action="#contact2" data-ajax="false">
+                <form method="post" action="" data-ajax="false">
                     
                     <label for="name">Name : <span>*</span></label>
                     <input type="text" name="name" id="" placeholder="Name">
